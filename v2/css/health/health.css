@@ -1,0 +1,847 @@
+
+
+/* =================================
+   =DIRECTORY
+   ================================= */
+/*
+  1.  =Animations
+  2.  =Loading Screen
+  3.  =Menu
+  4.  =Global Styles
+  5.  =Links
+  6.  =Custom Classes
+  7.  =Health Section
+  8.  =Media Queries
+*/
+
+
+
+/* =================================
+   =Animations
+   ================================= */
+/*
+  1. ~Spin
+*/
+
+
+/* ~Spin
+   --------------------------------- */
+  @-webkit-keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+                transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+                transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+  }
+  @keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);  
+                transform: rotate(0deg);  
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+  }
+
+
+
+/* =================================
+   =Loading Screen
+   ================================= */
+/*
+  1.  ~Loader Structure
+  2.  ~Loaded Styles
+*/
+
+
+/* ~Loader Structure
+   --------------------------------- */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  z-index: 2001;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 25%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  z-index: 2002;
+
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 200%;
+  background: #292b35;
+  z-index: 2000;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+
+/* ~Loaded Styles
+   --------------------------------- */
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateX(-100%);  /* IE 9 */
+          transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%); 
+
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+          transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.loaded #loader {
+  opacity: 0;
+
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+
+}
+.loaded #loader-wrapper {
+  visibility: hidden;
+
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+
+  -webkit-transition: all 0.3s 1s ease-out;
+          transition: all 0.3s 1s ease-out;
+}
+
+
+
+/* =================================
+   =Menu
+   ================================= */
+/*
+  1.  ~Menu Button
+  2.  ~Menu
+*/
+
+
+/* ~Menu Button
+   --------------------------------- */
+#menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: #292b35; 
+  cursor: pointer;
+  z-index: 1050;
+
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+
+  -webkit-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+}
+
+#menu-btn span {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 6.18px;
+  background: #FFF0D2;
+  opacity: 1;
+
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+
+  -webkit-transition: .25s ease-in-out;
+          transition: .25s ease-in-out;
+}
+
+#menu-btn span:nth-child(even) {
+  left: 25px;
+  border-radius: 0 6.18px 6.18px 0;
+}
+
+#menu-btn span:nth-child(odd) {
+  left: 10px;
+  border-radius: 6.18px 0 0 6.18px;
+}
+
+#menu-btn span:nth-child(1), #menu-btn span:nth-child(2) {
+  top: 11px;
+}
+
+#menu-btn span:nth-child(3), #menu-btn span:nth-child(4) {
+  top: 23px;
+}
+
+#menu-btn span:nth-child(5), #menu-btn span:nth-child(6) {
+  top: 35px;
+}
+
+#menu-btn.open span:nth-child(1),#menu-btn.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#menu-btn.open span:nth-child(2),#menu-btn.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#menu-btn.open span:nth-child(1) {
+  left: 10px;
+  top: 15px;
+}
+
+#menu-btn.open span:nth-child(2) {
+  left: 25px;
+  top: 15px;
+}
+
+#menu-btn.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+#menu-btn.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+#menu-btn.open span:nth-child(5) {
+  left: 10px;
+  top: 30px;
+}
+
+#menu-btn.open span:nth-child(6) {
+  left: 25px;
+  top: 30px;
+}
+
+
+/* ~Menu
+   --------------------------------- */
+#menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1043;
+
+  height: 100vh;
+  width: 100%;
+  background: #478378;
+  border: none;
+
+  text-align: center;
+  font-family: 'Roboto Slab', 'serif';
+  font-size: 2em;
+
+}
+
+#menu-items-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#menu-items {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.menu-link {
+  display: block;
+  height: 80px;
+}
+
+
+
+/* =================================
+   =Global Styles
+   ================================= */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #292b35;
+  color: #FFF0D2;
+
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.row {
+  margin: 0;
+}
+
+.section-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-header {
+  margin: 0;
+
+  font-family: 'Roboto Slab', 'serif';
+  font-size: 3.25em;
+  text-align: center;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+
+/* =================================
+   =Links
+   ================================= */
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover  {
+  color: #478378;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:hover {
+  color: #7DB6AD;
+}
+
+.primary-color,
+.primary-color:link,
+.primary-color:visited,
+.primary-color:active,
+.primary-color:hover {
+  color: #FFF0D2;
+  padding: 0 10px;
+}
+
+
+
+/* =================================
+   =Custom Classes
+   ================================= */
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+      -ms-transform: translate(0,-50%);
+          transform: translate(0,-50%);
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-padding-left {
+  padding-left: 0;
+}
+
+.no-padding-right {
+  padding-right: 0;
+}
+
+.padding-left-5 {
+  padding: 0 0 0 5px;
+}
+
+.padding-right-5 {
+  padding: 0 5px 0 0;
+}
+
+.text-container {
+  width: 90%;
+  max-width: 650px;
+  margin: 25px auto 0;
+  font-size: 1.4em;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #FFF0D2;
+  margin: 1.25em auto;
+  padding: 0; 
+}
+
+.hr-full {
+  width: 100%;
+}
+
+.hr-med {
+  width: 61.8%;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 60px;
+  left: 0;
+}
+
+.absolute {
+  position: absolute;
+  left: 0;
+}
+
+.overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #292b35;
+  z-index: 2000;
+}
+
+
+
+/* =================================
+   =Form Styles
+   ================================= */
+
+.form-text {
+  margin: 0 0 10px;
+  padding: 0 0 5px;
+  display: block;
+  font-size: 1.4em;
+}
+
+.panel{
+  width: 100%;
+  max-width: 300px;
+  margin: 25px auto 0;
+
+  background-color: #292b35;
+  border-color: #FFF0D2;
+}
+
+.panel-heading,
+.panel-footer{
+  color: #FFF0D2;
+  background-color: #292b35;
+  border-color: #FFF0D2; 
+}
+
+.panel-title {
+  font-size: 1.5em;
+}
+
+.radio-control {
+  text-align: left;
+}
+
+form label {
+  font-size: 1.25em;
+  text-align: left;
+  padding: 0 10px; 
+}
+
+.error-messages {
+  font-size: 1.15em;
+  padding: 5px 0;
+  text-align: left;
+  display: block;
+  color: #953232;
+}
+
+input[type='text'],
+input[type='number'],
+textarea,
+.form-control {
+  text-align: center;
+  font-size: 16px;
+}
+
+.panel-wrapper {
+  padding: 0;
+  margin-top: 25px;
+}
+
+
+
+/* =================================
+   =Intro Section
+   ================================= */
+   
+#intro {
+  margin-bottom: 50px;
+}
+
+
+
+/* =================================
+   =Disclaimer Section
+   ================================= */
+   
+#disclaimer {
+  margin-bottom: 50px;
+}
+
+
+
+/* =================================
+   =BMR Section
+   ================================= */
+  
+#bmr {
+  margin-bottom: 50px;
+}
+
+#bmr-resultForm {
+  display: none;
+}
+
+#bmr-result {
+  color: #478378; 
+  font-size: 2em;
+}
+
+#bmr-form .form-group{
+  margin-bottom: 20px;
+}
+
+.btn-default {
+  width: 80%;
+  font-size: 1.25em;
+  color: #000;
+}
+
+
+
+/* =================================
+   =Activity Section
+   ================================= */
+  
+#activity {
+  margin-bottom: 50px;
+}
+
+#tdc-resultForm {
+  display: none;
+}
+
+#bmr-result1 {
+  margin: 0;
+  text-align: left; 
+  font-size: 1.25em;
+}
+
+#tdc-result {
+  color: #478378; 
+  font-size: 2em;
+}
+
+#tdc-form .form-group{
+  margin-bottom: 15px;
+}  
+
+
+
+/* =================================
+   =Goal Section
+   ================================= */   
+
+#goal {
+  margin-bottom: 50px;
+}
+
+#goal-resultForm {
+  display: none;
+}
+
+#tdc-result1 {
+  margin: 0;
+  text-align: left; 
+  font-size: 1.25em;
+}
+
+#goal-result {
+  color: #478378; 
+  font-size: 2em;
+}
+
+#goal-form .form-group{
+  margin-bottom: 15px;
+}
+
+
+
+/* =================================
+   =Macro Section
+   ================================= */
+
+#macro {
+  margin-bottom: 50px;
+}
+
+#macro-resultForm {
+  display: none;
+}
+
+#goal-result1 {
+  margin: 0;
+  text-align: left; 
+  font-size: 1.25em;
+}
+
+#macro-result {
+  color: #478378; 
+  font-size: 2em;
+}
+
+#macro-form .form-group{
+  margin-bottom: 15px;
+}
+
+.ratioBox {
+  margin: 0 auto;
+  width: 61.8px;
+  height: 61.8px;
+}
+
+.ratioInput {
+  height: 100%;
+  text-align: center;
+  font-size: 1.5em; 
+  font-weight: bold;
+}
+
+#customRatio {
+  display: none;
+}
+
+
+
+/* =================================
+   =Review Section
+   ================================= */
+
+
+
+
+/* =================================
+   =Contact Section
+   ================================= */
+
+#contact {
+  position: relative;
+  min-height: 100vh;
+  font-size: 1.25em;
+}
+
+#contact h1 {
+  margin: 0;
+  font-size: 1.75em;
+}
+
+.contact-info {
+  width: 100%;
+}
+
+.contact-info li {
+  padding-bottom: 25px;
+}
+
+.contact-info span {
+  padding-right: 20px;
+}
+
+.logo {
+  max-height: 61.8px;
+}
+
+
+
+/* =================================
+   =Media Queries
+   ================================= */
+/*
+  1.  ~Mobile Landscape Orientation
+  2.  ~Tablet 
+  3.  ~Tablet Portrait Orientation
+  4.  ~Tablet Landscape Orientation
+  5.  ~Desktop 
+*/
+
+
+/* ~Mobile Landscape Orientation
+   --------------------------------- */
+@media screen and (orientation:landscape) and (max-width: 750px){
+
+  /* =Menu
+  ------------------------*/
+  .menu-link {
+    height: 61.8px;
+  }
+
+}
+
+
+/* ~Tablet 
+   --------------------------------- */
+@media screen and (min-width: 760px) {
+
+  .section-wrapper {
+    width: 80%;
+  }
+
+  .text-container {
+    font-size: 2em;
+  }
+
+  .panel-wrapper {
+    padding: 0 15px;
+  }
+  
+
+  /* =Loading Screen 
+  ------------------------*/
+  #loader {
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+  }
+
+
+  /* =Contact 
+  ------------------------*/
+  #contact {
+    font-size: 2em;
+  }
+  .contact-info li {
+    padding-bottom: 33px;
+  }
+  .logo {
+    max-height: 106.18px;
+  }
+
+}
+
+
+/* ~Tablet Portrait Orientation 
+   --------------------------------- */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  
+  /* =Menu
+  ------------------------*/
+  #menu {
+    height: 1024px;
+  }
+
+  /* =Contact 
+  ------------------------*/
+  #contact {
+    height: 1024px;
+  }
+
+}
+
+
+/* ~Tablet Landscape Orientation 
+   --------------------------------- */
+@media all and (orientation:landscape) and (min-width: 768px) and (max-width: 1024px){
+    
+  /* =Menu 
+  ------------------------*/
+  #menu {
+    height: 768px;
+  }
+
+  /* =Contact 
+  ------------------------*/
+  #contact {
+    height: 768px;
+  }
+
+}
+
+
+
+/* ~Desktop 
+   --------------------------------- */
+@media screen and (min-width: 1025px) {  
+
+  .section-wrapper {
+    width: 80%;
+  }
+
+  .text-container {
+    font-size: 1.75em;
+  }
+
+  .panel-wrapper {
+    margin-top: 50px;
+  }
+
+
+  /* =Contact 
+  ------------------------*/
+  #contact {
+    font-size: 1.618em;
+  }
+  .logo {
+    max-height: 81.6px;
+  }
+
+}
+
+
+
+
+
+
+
+

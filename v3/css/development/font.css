@@ -1,0 +1,279 @@
+
+
+/*=================================
+  =Directory - font.css
+  =================================*/
+/*
+  1.  =Font Color
+  2.  =Font Family
+  3.  =Mobile-Portrait Font Size
+  4.  =Mobile-Landscape Font Size
+  5.  =Tablet-Portrait Font Size 
+  6.  =Tablet-Landscape Font Size
+  7.  =Desktop Font Size
+*/
+
+
+/*=================================
+  =Font Color
+  =================================*/
+
+  body {
+    background-color: #292b35;
+    color: #FFF0D2;
+  }
+
+
+  /* ~Links
+  ---------------------------------*/
+  a,
+  a:link,
+  a:visited {
+    color: #478378;
+    outline: 0;
+    text-decoration: none;
+    backface-visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+  a:hover {
+    color: #77B5AA;
+    transform: scale(1.1) translateZ(0);
+  }
+
+  a:active {
+    color: #396A61;
+    transform: scale(1) translateZ(0);
+  }
+
+  .link-light,
+  .link-light:link,
+  .link-light:visited {
+    color: #FFF0D2;
+    outline: 0;
+    text-decoration: none;
+    backface-visibility: hidden;
+    transition: 0.3s ease-in-out; 
+  }
+  .link-light:hover {
+    color: #FFF7E6;
+    transform: scale(1.1) translateZ(0);   
+  }
+  .link-light:active {
+    color: #FFE9BE;
+    transform: scale(1) translateZ(0);
+  }
+
+
+/*=================================
+  =Font Family
+  =================================*/
+  body {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .section-header {
+    font-family: 'Roboto Slab', serif;
+  }
+
+  #main-menu,
+  #mobile-main-menu {
+    font-family: 'Roboto Slab', serif;
+  }
+
+  #filter-menu,
+  #mobile-filter-menu {
+    font-family: 'Roboto Slab', serif;
+  }
+
+
+/*=================================
+  =Mobile-Portrait Font Size
+  =================================*/
+
+  /* ~Global
+  ---------------------------------*/
+    body {
+      /*font-size: 10px;*/
+    }
+
+    .section-header {
+      font-size: 3.75em;
+    }
+
+    .text-container {
+      font-size: 1.3em;
+    }
+
+    .mobile-menu {
+      font-size: 2em;
+    }
+
+    .icon-box {
+      font-size: 1.2em;
+    }
+
+
+  /* ~Gallery
+  ---------------------------------*/
+    #filter-menu {
+      font-size: 2em;
+    }
+
+    .gallery-card-title {
+      font-size: 1.6em;
+    }
+
+  /* ~Contact
+  ---------------------------------*/
+    #contact footer {
+      font-size: 1em;
+    }
+
+    .social-link {
+      font-size: 2.25em;
+    }
+
+
+/*=================================
+  =Mobile-Landscape Font Size
+  =================================*/
+  @media all and (orientation:landscape) and (max-width: 768px) {
+
+  /* ~Gallery
+  ---------------------------------*/
+    .gallery-card-title {
+      font-size: 1.43em;
+    }
+
+  }
+
+
+/*=================================
+  =Tablet-Portrait Font Size
+  =================================*/
+  @media all and (min-width: 768px) {
+
+  /* ~Global
+  ---------------------------------*/
+    .mobile-menu {
+      font-size: 2.7em;
+    }
+
+    .section-header {
+      font-size: 4em;
+    }
+
+    .text-container {
+      font-size: 1.6em;
+    }
+
+
+  /* ~Gallery
+  ---------------------------------*/
+    .gallery-card-title {
+      font-size: 2em;
+    }
+
+
+  /* ~Health
+  ---------------------------------*/
+    .health-link {
+      font-size: 2em;
+    }
+
+
+  /* ~Contact
+  ---------------------------------*/
+    #contact footer {
+      font-size: 1.2em;
+    }
+
+    .social-link {
+      font-size: 2.5em;
+    }
+
+
+  }
+
+
+/*=================================
+  =Tablet-Landscape Font Size
+  =================================*/
+  @media all and (orientation:landscape) and (min-width: 768px) and (max-width: 1024px) {
+
+  /* ~Gallery
+  ---------------------------------*/
+    .gallery-card-title {
+      font-size: 1.6em;
+    }
+
+  }
+
+
+/*=================================
+  =Laptop Font Size
+  =================================*/
+  @media all and (min-width: 1025px) {
+
+  /* ~Global
+  ---------------------------------*/
+    #main-menu {
+      font-size: 2em;
+    }
+
+    .text-container {
+      font-size: 1.8em;
+    }
+
+    .icon-box {
+      font-size: 1.4em;
+    }
+
+
+  /* ~Gallery
+  ---------------------------------*/
+    .gallery-card-title {
+      font-size: 1.6em;
+    }
+
+
+  /* ~Health
+  ---------------------------------*/
+    .health-link {
+      font-size: 2.5em;
+    }
+
+
+  }
+
+
+/*=================================
+  =Desktop Font Size
+  =================================*/
+  @media all and (min-width: 1200px) {
+
+    #main-menu {
+      font-size: 2.2em;
+    }
+
+    
+    /* ~Contact
+    ---------------------------------*/
+      .social-link {
+        font-size: 2.75em;
+      }
+
+  }
+
+
+
+/*=================================
+  =Large Screen Font Size
+  =================================*/
+  @media all and (min-width: 1500px) {
+
+    #main-menu {
+      font-size: 3em;
+    }
+  
+  } 

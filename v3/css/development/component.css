@@ -1,0 +1,142 @@
+
+
+/*=================================
+  =Directory - component.css
+  =================================*/
+/*
+  1.  =Logo
+  2.  =Social Link
+  3.  =Custom HR
+  4.  =Icon Box
+*/
+
+
+/*=================================
+  =Logo
+  =================================*/
+  
+  /* Structure
+  ---------------------------------*/
+  .logo {
+    max-height: 61.8px;
+  }
+  @media all and (min-width: 768px) { 
+    .logo {
+      max-height: 106.18px;
+    }
+  }
+  @media all and (min-width: 1025px) {
+    .logo {
+      max-height: 81.6px;
+    }
+  }
+
+
+/*=================================
+  =Socail Link
+  =================================*/
+
+  /* Structure
+  ---------------------------------*/
+  .social-link {
+    display: inline-block;
+    margin: 0 15px;
+    height: 100px;
+    line-height: 100px;
+    width: 30px;
+  }
+  @media all and (min-width: 768px) {
+    .social-link {
+      height: 125px;
+      line-height: 125px;
+    }
+  }
+  @media all and (min-width: 1025px) {
+    .social-link {
+      height: 150px;
+      line-height: 150px;
+    }
+  }
+
+/*=================================
+  =Custom HR
+  =================================*/
+
+  /* Structure
+  ---------------------------------*/
+  .hr-full,
+  .hr-lg,
+  .hr-med,
+  .hr-sm,
+  .hr-xs {
+    display: block;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid;
+    margin: 1.25em auto;
+    padding: 0; 
+  }
+
+  .hr-lg {
+    width: 75%;
+  }
+
+  .hr-med {
+    width: 50%;
+  }
+
+  .hr-sm {
+    width: 30%; 
+  }
+
+  .hr-xs {
+    width: 13%;
+  }
+
+  .hr-75 {
+    width: 75px;
+  }
+
+
+  /* Color
+  ---------------------------------*/
+  .hr-full,
+  .hr-lg,
+  .hr-med,
+  .hr-sm,
+  .hr-xs {
+    border-color: #FFF0D2;
+  }
+
+
+
+/*=================================
+  =Icon Box
+  =================================*/
+
+  /* Structure
+  ---------------------------------*/
+  .icon-box {
+    margin: 75px auto;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .icon-box-text {
+    margin: 0 auto;
+    width: 95%; 
+  }
+
+
+  /* Color
+  ---------------------------------*/
+/*  
+  .icon-box .fa {
+    color: #FFF0D2;
+  }
+*/
+
+
+
+

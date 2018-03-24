@@ -1,0 +1,66 @@
+
+// ===========================================
+// Breakpoints
+// ===========================================
+
+
+// Widths
+// ===========================================
+  @mixin bp-min-width-sm {
+    @media all and (min-width: em(800px)) {
+      @content;
+    }
+  }
+
+  @mixin bp-min-width-md {
+    @media all and (min-width: em(1200px)) {
+      @content;
+    }
+  }
+
+  @mixin bp-min-width-lg {
+    @media all and (min-width: em(1400px)) {
+      @content;
+    }
+  }
+
+  @mixin bp-min-width-xl {
+    @media all and (min-width: em(1600px)) {
+      @content;
+    }
+  }
+
+  @mixin bp-min-width($value) {
+    @media all and (min-width: em($value)) {
+      @content;
+    }
+  }
+
+  @mixin bp-max-width($value) {
+    @media all and (max-width: em($value)) {
+      @content;
+    }
+  }
+
+
+// Orientation
+// ===========================================
+  @mixin bp-landscape-phone {
+    @media all and (orientation:landscape) and (max-width: em(768px)) {
+      @content;
+    } 
+  }
+
+  @mixin bp-landscape-tablet {
+    @media all and (orientation:landscape) and (max-width: em(1024px)) {
+      @content;
+    } 
+  }
+
+  @mixin bp-portrait-tablet {
+    @media all and (orientation:portrait) and (max-width: em(1024px)) {
+      @content;
+    } 
+  }  
+
+

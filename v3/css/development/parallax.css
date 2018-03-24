@@ -1,0 +1,73 @@
+
+
+/* HTML: Intro parallax
+  =================================        
+  <img id="sky" class="parallax-img img-responsive" src="img/parallax/sky.png">
+  <img id="topclouds" data-600-top="transform:translate3d(0px, 60px, 0px);" data-top-bottom="transform:translate3d(0px, -60px, 0px);" class="parallax-img img-responsive" src="img/parallax/topclouds.png">
+  <img id="bottomclouds" data-600-top="transform:translate3d(0px, 40px, 0px);" data-top-bottom="transform:translate3d(0px, -40px, 0px);" class="parallax-img img-responsive" src="img/parallax/bottomclouds.png">
+  <img id="sun" class="parallax-img img-responsive" src="img/parallax/sun.png">
+  <img id="distantmountains" data-600-top="transform:translate3d(0px, 30px, 0px);" data-top-bottom="transform:translate3d(0px, -30px, 0px);" class="parallax-img img-responsive" src="img/parallax/distantmountains.png">
+  <img id="nearmountains" data-600-top="transform:translate3d(0px, 30px, 0px);" data-top-bottom="transform:translate3d(0px, -30px, 0px);" class="parallax-img img-responsive" src="img/parallax/nearmountains.png">
+  <img id="tree" data-600-top="transform:translate3d(0px, 150px, 0px);" data-top-bottom="transform:translate3d(0px, -220px, 0px);" class="parallax-img img-responsive" src="img/parallax/tree.png">
+*/
+
+/* Javascript: Init skrollr
+  =================================  
+  if ($('.desktop-only').is(':visible')) {
+    // init after load to avoid problems
+    $(window).load(function () {
+      skrollr.init({
+        smoothScrolling: false,
+        smoothScrollingDuration: 350
+      });
+    })   
+  }
+*/
+
+
+/*=================================
+  =Directory - parallax.css
+  =================================*/
+  
+  #intro {
+    height: 100vh;
+  }
+
+  .parallax-img {
+    position: absolute;
+    top: 0;
+  }
+
+  #sky {
+    z-index: 1;
+  }
+
+  #topclouds {
+    z-index: 2;
+  }
+
+  #bottomclouds {
+    z-index: 3;
+  }
+
+  #sun {
+    z-index: 4;
+  }
+
+  #distantmountains {
+    z-index: 5;
+  }
+
+  #nearmountains {
+    z-index: 6;
+  }
+
+  #tree {
+    z-index: 7;
+    border-bottom: solid 150px;
+    border-color: #292b35;
+  }
+
+  #about .section-header {
+    margin-top: 120px;
+  }

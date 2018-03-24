@@ -1,0 +1,62 @@
+
+
+/*=================================
+  =Directory - intro.css
+  =================================*/
+  
+  .intro-img {
+    display: none;
+  }
+
+  /* Mobile Landscape
+  ---------------------------------*/
+  @media all and (orientation:landscape) and (max-width: 750px) {
+    
+    .intro-img {
+      display: block;
+    }
+    .mobile-intro-img {
+      display: none;
+    }
+  }
+
+
+  /* Tablet Landscape
+  ---------------------------------*/
+  @media all and (orientation:landscape) and (min-width: 768px) and (max-width: 1024px) {
+    
+    .intro-img {
+      display: block;
+    }
+    .mobile-intro-img {
+      display: none;
+    }
+  }
+
+
+  /* Desktop
+  ---------------------------------*/
+  @media all and (min-width: 800px) {
+    
+    /* set equal to height of main menu  */
+    /*
+    #intro {
+      margin-top: 70px;
+    } */ 
+    
+    .intro {
+      position: relative;
+      margin-top: -1px;
+    }
+
+    .intro-img {
+      display: block;
+    }
+    .mobile-intro-img {
+      display: none;
+    }
+  }
+
+
+
+

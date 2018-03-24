@@ -1,0 +1,39 @@
+
+// ===========================================
+// HR
+// ===========================================
+
+
+// Structure
+// ===========================================
+  .hr {
+    display: block;
+    padding: 0;
+    border: 0;
+    border-top: rem(1px) solid;
+    margin: rem(16px) auto;
+
+    height: rem(1px);
+    width: 100%; 
+  }
+
+  .hr--med {
+    width: 50%;
+  }
+
+  .hr--sm {
+    width: 30%;
+  }
+
+  .hr--75 {
+    width: rem(75px);
+  }
+
+
+// Color
+// ===========================================
+  .hr {
+    border-color: $color-text;
+  }
+
+

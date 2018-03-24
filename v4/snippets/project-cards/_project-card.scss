@@ -1,0 +1,113 @@
+
+// ===========================================
+// Project Card
+// ===========================================
+
+
+// Structure
+// ===========================================
+  .card-deck-wrapper {
+    margin: rem(50px) auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .card {
+    max-width: 400px;
+    margin: 2.25rem auto;
+    text-align: left;
+  }
+
+  // empty placeholder
+  .card.invisible {
+    visibility: hidden !important;
+  }
+
+  .card-link {
+    display: inline-block;
+    padding: 2.5px 0;
+  }
+  @media (min-width: 800px) and (max-width: 1024px) {
+
+    .card-link {
+      display: block;
+      margin: 5px 0;
+    }
+
+    .card-link + .card-link {
+      margin: 0;
+    }
+
+  }
+
+
+// Font
+// ===========================================  
+  .card-title {
+    font-size: 25px;
+  }
+
+  .card-subtitle {
+    font-size: 14px;
+  }
+
+  .card-text {
+    font-size: 18px;
+  }
+
+  .card-link {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+
+// Effects
+// ===========================================
+  // siblings fade on hover
+  @media (min-width: 1025px) {
+
+    // prevent :hover from triggering in gaps
+    .card-deck-wrapper {
+      visibility: hidden;
+    }
+
+    // make cards visible
+    .card-deck-wrapper .card {
+      visibility: visible;
+      transition: opacity 0.2s ease-in-out 0.1s;
+    }
+
+    .card-deck-wrapper:hover .card {
+      opacity: 0.5;
+    }
+
+    .card-deck-wrapper:hover .card:hover {
+      opacity: 1;
+    }
+  }
+
+
+// Color
+// ===========================================
+  .card {
+    background: color-shade(text, x-light);
+    border-color: color-shade(secondary, x-dark);
+    color: color-shade(primary)
+  }
+
+  .card-header {
+    background: color-shade(text, x-light);
+  }
+
+  .card-title {
+    color: color-shade(primary);
+  }
+
+  .card-subtitle {
+    color: color-shade(primary, x-light);
+  }
+
+  .card-link {
+    color: color-shade(accent);
+  }
+

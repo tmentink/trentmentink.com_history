@@ -1,0 +1,48 @@
+
+// ===========================================
+// Links
+// ===========================================
+
+
+// Structure
+// ===========================================
+  .link {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  .link--underline {
+    border-bottom: rem(1px) solid;
+  }
+
+
+// Color
+// ===========================================
+  .link {
+    color: color-shade(links, dark);
+    
+    @include transition("color", 0.3s);
+
+    &:hover {
+      color: color-shade(links);
+    }
+
+    &:active {
+      color: color-shade(links, xx-dark);
+    }
+  }
+
+
+  .link--text-color {
+    color: color-shade(text, x-dark);
+
+    &:hover {
+      color: color-shade(text, dark);
+    }
+
+    &:active {
+      color: color-shade(text, xx-dark);
+    }
+  }
+
+

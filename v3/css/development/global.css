@@ -1,0 +1,205 @@
+
+
+/*=================================
+  =Directory - global.css
+  =================================*/
+/*
+  1.  =Body
+  2.  =Structure/Layout
+  3.  =Utility
+  4.  =Overwrites
+*/
+
+
+/*=================================
+  =Body
+  ================================*/
+  body {
+    text-align: center;
+  }
+
+
+  /* Hide Scrollbars
+  ---------------------------------*/
+  html {
+    -ms-overflow-style: none;
+  }
+  ::-webkit-scrollbar { 
+    display: none; 
+  }
+
+
+/*=================================
+  =Structure/Layout
+  =================================*/
+  
+  /* parent must have position set to relative */
+  .absolute-vcenter {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+  }
+
+  /* parent must have position set to relative */
+  .absolute-vhcenter-portrait {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+  }
+  @media all and (orientation:landscape) and (max-width: 1024px) {
+    /* remove horizontal centering on landscape orientation */
+    .absolute-vhcenter-portrait {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      -webkit-transform: translate(0,-50%);
+              transform: translate(0,-50%);
+    }
+  }
+
+
+  /* this class will get overwritten by javascript to handle address bars */
+  .vh-100{
+    height: 100vh;
+  }
+  /* staticlly define height due to bug with vh units on iOS 7 devices */
+  @media all and (orientation: landscape) and (device-width: 320px) {
+    /* targets both iphone 4 and 5 in landscape */
+    .vh-100 {
+      height: 320px;
+    }
+  }
+  @media all and (orientation: portrait) and (device-width: 320px) and (device-height: 480px) {
+    /* targets iphone 4 in portrait */
+    .vh-100 {
+      height: 480px;
+    }
+  }
+  @media all and (orientation: portrait) and (device-width: 320px) and (device-height: 568px) {
+    /* targets iphone 5 in portrait */
+    .vh-100 {
+      height: 568px;
+    }
+  }
+  @media all and (orientation: landscape) and (device-width: 768px) and (device-height: 1024px) {
+    /* targets iPads in landscape */
+    .vh-100 {
+      height: 768px;
+    }
+  }
+  @media all and (orientation: portrait) and (device-width: 768px) and (device-height: 1024px) {
+    /* targets iPads in portrait */
+    .vh-100 {
+      height: 1024px;
+    }
+  }
+
+
+  .section-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media all and (min-width: 1025px) {
+    .section-wrapper {
+      padding-bottom: 75px;
+    }    
+  }
+
+
+  .section-header {
+    margin: 50px auto 25px;
+    max-width: 90%;
+  }
+  @media all and (min-width: 1025px) {
+    .section-header {
+      margin: 100px auto 50px;
+    }    
+  }
+
+
+  .text-container {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 80%;
+  }
+  @media all and (orientation:landscape) and (min-width: 768px) and (max-width: 1024px){ 
+    .text-container {
+      width: 60%;
+    }
+  }
+  @media all and (min-width: 1025px) { 
+    .text-container {
+      width: 50%;
+    }
+  }
+
+
+/*=================================
+  =Utility
+  =================================*/
+  .no-margin {
+    margin: 0 !important;
+  }
+  .no-padding {
+    padding: 0 !important;
+  }
+  .no-border {
+    border: none !important;
+  }
+
+
+  /* Responsive Classes
+  ---------------------------------*/
+  .desktop-only {
+    display: none !important;
+  }
+  @media all and (min-width: 1025px) {
+    .desktop-only {
+      display: block !important;
+    }
+
+    .mobile-only {
+      display: none !important;
+    }
+  }
+
+
+/*=================================
+  =Overwrites
+  =================================*/
+
+  /* Bootstrap Overwrite
+  ---------------------------------*/
+  .container-fluid {
+    margin: 0;
+    padding: 0;
+  }
+  .row {
+    margin: 0;
+  }
+  .img-responsive {
+    margin: 0 auto;
+  }
+
+  /* Magnific-Popup Overwrite
+  ---------------------------------*/
+  .mfp-bg {
+    z-index: 2042;
+  }
+  .mfp-wrap {
+    z-index: 2043;
+  }
+  .mfp-content {
+    z-index: 2045; 
+  }
+  .mfp-preloader {
+    z-index: 2044;
+  }
+  button.mfp-close,
+  button.mfp-arrow {
+    z-index: 2046;
+  }
+

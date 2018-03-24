@@ -1,0 +1,19 @@
+
+
+/*=================================
+  =Directory - about.css
+  =================================*/
+  
+
+  @media all and (max-width: 1024px) { 
+    #about.section-wrapper {
+      padding-bottom: 25px;
+    }
+  }
+
+
+
+
+
+
+

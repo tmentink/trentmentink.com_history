@@ -1,0 +1,660 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Trent Mentink | Web Developer | Art Hobbyist</title>
+    <meta name="description" content="Trent Mentink's personal website and portfolio">
+    <meta name="author" content="Trent Mentink">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='shortcut icon' href='../favicon.ico' type='image/x-icon'/ >
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="../css/vendor/normalize.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/vendor/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../css/vendor/bootstrap/bootstrap.min.css">
+
+    <!-- formValidation CSS -->
+    <link rel="stylesheet" href="../css/vendor/formvalidation/formValidation.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic,300,300italic|Roboto+Slab:700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/health/health.css?v=3.9"/>
+
+    <script src="../js/vendor/modernizer/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+    
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="loader-wrapper">
+        <img id="loader" src="../img/logo.png">
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div> <!-- #loader-wrapper -->
+
+
+<!-- MENU SECTION 
+===========================================-->
+    <div id="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div id="menu">
+      <div id="menu-items-wrapper">
+        <ul id="menu-items" class="absolute-center">
+          <li class="menu-link"><a href="../" class="no-margin primary-color">Home</a></li>
+          <li class="menu-link"><a href="#bmr" class="no-margin primary-color">BMR</a></li>
+          <li class="menu-link"><a href="#review" class="no-margin primary-color">Review</a></li>
+          <li class="menu-link"><a href="#contact" class="no-margin primary-color">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- This div wraps the entire page in a fluid container. It is needed for bootstraps grid system. -->  
+    <div class="fluid-container">
+
+
+<!-- INTRO SECTION 
+===========================================-->      
+      <div id="intro" class="section-wrapper">
+<!--         <h1 class="section-header">Intro</h1>
+        <div class="text-container text-justify">
+          <p>I have never been an advocate of diet plans because they always seemed to be unnatural, temporary ways of approaching nutrition. These diet plans are often extreme and would ask people to drastically change the way they are eating promising quick results. One of the problems with these extreme approaches is they can cause people to have an unhealthy relationship with their food. Being forced to a strict regimen and eating only a limited selection of food is unnatural and can fuel cravings and binge-eating. The other problem is that these diet plans are meant to be temporary but rarely tell you how to create new habits that will allow you to naturally maintain your desired weight.</p>
+
+          <hr class="hr-med">
+
+          <p></p>
+        </div> -->
+      </div> <!-- #intro -->
+
+
+<!-- DISCLAIMER SECTION 
+===========================================--> 
+      <div id="disclaimer" class="section-wrapper row">
+        <h1 class="section-header">Disclaimer</h1>
+        
+        <div class="col-md-12">
+          <div class="text-container text-justify">I do not claim to be a certified nutritionist but I have had success achieving and sustaining my weight goals using the following steps to calculate my macronutrients. Please consult your doctor before making any diet changes.</div>
+        </div>
+      </div>
+
+<!-- BMR SECTION 
+===========================================-->      
+      <div id="bmr" class="section-wrapper row">
+        <h1 class="section-header">BMR</h1>
+
+        <div class="col-md-12"> 
+          <div class="text-container text-justify">No matter what you are doing, your body is constantly burning energy. The term Basal Metabolic Rate (BMR) refers to the number of calories your body needs to perform its daily functions like breathing and the beating of your heart. Your BMR is the most important number for creating your personalized diet plan. Luckily you can estimate it with a simple calculation.</div> 
+        </div>
+
+        <div class="col-md-12 panel-wrapper">
+          <div id="bmr-panel" class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">Calculate BMR</h3>
+            </div>
+
+            <div class="panel-body">
+              <form id="bmr-form" class="form-horizontal">
+
+                <!-- ====== Gender ====== -->
+                <div class="form-group">
+                  <label class="col-xs-4">Gender:</label>               
+                  <div class="no-padding radio-control col-xs-4">
+                    <input type="radio" name="gender" id="gender-female" value="Female">
+                    <label for="gender-female" class="padding-left-5"> Female</label>
+                  </div>
+
+                  <div class="no-padding radio-control col-xs-3">
+                    <input type="radio" name="gender" id="gender-male" value="Male">
+                    <label for="gender-male" class="padding-left-5"> Male</label>
+                  </div>
+                </div><!-- .form-group -->
+
+                <!-- ====== Height ====== -->
+                <div class="form-group">
+                  <label class="col-xs-4" for="txtHeight-ft">Height:</label>
+                  <div class="no-padding col-xs-3">
+                    <input type="number" class="no-padding form-control input-sm" id="txtHeight-ft" placeholder="Feet" name="feet">
+                  </div>
+                  <label class="padding-left-5 col-xs-1" for="txtHeight-ft">ft</label>
+                  <!-- <p>ft</p> -->
+                  <div class="no-padding col-xs-3">
+                    <input type="number" class="no-padding form-control input-sm" id="txtHeight-in" placeholder="Inches" name="inches">
+                  </div>
+                  <label class="padding-left-5 col-xs-1" for="txtHeight-in">in</label>
+                  <!-- <p>in</p> -->
+                </div><!-- .form-group -->
+
+                <!-- ====== Weight ====== -->
+                <div class="form-group">
+                  <label class="col-xs-4" for="txtWeight">Weight:</label>
+                  <div class="no-padding col-xs-3">
+                    <input type="number" class="no-padding form-control input-sm" id="txtWeight" name="weight" placeholder="Weight">
+                  </div>
+                  <label class="padding-left-5 col-xs-1" for="txtWeight">lbs</label>
+                </div><!-- .form-group -->
+
+                <!-- ====== Age ====== -->
+                <div class="form-group">
+                  <label class="col-xs-4" for="txtAge">Age:</label>
+                  <div class="no-padding col-xs-3">
+                    <input type="number" class="no-padding form-control input-sm" id="txtAge" name="age" placeholder="Age">
+                  </div>
+                  <label class="padding-left-5 col-xs-1" for="txtAge">yrs</label>
+                </div><!-- .form-group -->
+
+                <!-- ====== Messages ====== -->
+                <div class="form-group">
+                  <div class="col-xs-11 col-xs-offset-1">
+                    <div id="bmr-errors" class="error-messages"></div>
+                  </div>
+                </div><!-- .form-group -->
+
+                <hr class="hr-full">
+
+                <!-- ====== Submit ====== -->
+                <div class="form-button">
+                  <a id="calculate-bmr" class="btn btn-default" href="#bmr-panel">Calculate BMR</a>
+                </div>
+              </form> <!-- #bmr-form -->
+
+
+              <!-- ====== BMR Result ====== -->
+              <form id="bmr-resultForm" class="form-horizontal text-center">
+                <div class="form-group text-center">
+                  <h3>Basal Metabolic Rate:</h3>
+                  <p id="bmr-result" class="col-xs-12"></p>
+                </div><!-- .form-group -->
+
+                <!-- <p class="form-text text-justify">This number is an estimate of the total amount of calories your body needs to perform its daily functions like breathing and the beating of your heart. However, to get an accurate estimate of how many calories you burn every day we must also take into account your daily activity level.</p> -->
+
+                <p class="form-text text-justify">Now that we know your BMR, the next step is to calculate your total daily calories based on your activity level.</p>
+
+                <a class="form-text" href="#activity">Scroll To Next Section</a>
+
+                <hr class="hr-full">  
+
+                <div class="form-button">
+                  <a id="recalculate-bmr" class="btn btn-default" href="#bmr-panel">Recalculate BMR</a>
+                </div>                       
+              </form> <!-- #bmr-resultForm -->
+
+            </div> <!-- .panel-body -->
+          </div> <!-- #bmr-panel -->
+        </div> <!-- panel wrapper -->
+
+      </div> <!-- #bmr -->
+
+
+<!-- ACTIVITY SECTION 
+===========================================-->      
+      <div id="activity" class="section-wrapper row">
+        <h1 class="section-header">Activity</h1>
+
+        <div class="col-md-12">
+          <div class="text-container text-justify">In the previous section, you calculated your BMR which is the number of calories your body burns performing its daily functions. However, your activity level must also be taken into account in order to more accurately estimate your Total Daily Calories (TDC). Keep in mind that this is only an estimate as it is difficult to precisely determine this number.</div>
+        </div>
+
+        <div class="col-md-12 panel-wrapper">
+          <div id="tdc-panel" class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">Calculate TDC</h3>
+            </div>
+
+            <div class="panel-body">
+              <form id="tdc-form" class="form-horizontal">
+
+                <!-- ====== BMR Result ====== -->
+                <div class="form-group">
+                  <label class="no-padding-right col-xs-3">BMR:</label>
+                  <a href="#bmr-panel"><p id="bmr-result1" class="col-xs-8 no-padding">Complete BMR Form</p></a>
+                </div>
+
+                <!-- ====== Daily Activity ====== -->
+                <div class="form-group">
+                  <label class="col-xs-12">Describe your activity at work:</label>                 
+                  <label class="col-xs-5" for="workActivity">Activity: </label>
+                  <div class="col-xs-6 no-padding-left">
+                    <select id="workActivity" class="no-padding form-control input-sm" name="workActivity"> 
+                      <option value="">--Select--</option>
+                      <option value="0">Mostly sitting down</option>
+                      <option value="1">Mostly on your feet</option>
+                      <option value="2">Some physical activity</option>
+                      <option value="3">Heavy physical activity</option>
+                    </select>
+                  </div>
+                </div><!-- .form-group -->
+
+                <div class="form-group"></div>
+                <!-- ====== Exercise ====== -->
+                <div class="form-group">
+                  <label class="col-xs-12">Describe your weekly exercise:</label>
+                  <label class="col-xs-5" for="exerciseDay">Days: </label>
+                  <div class="col-xs-6 no-padding-left">
+                    <select id="exerciseDay" class="no-padding form-control input-sm" name="exerciseDay"> 
+                      <option value="">--Select--</option>
+                      <option value="0">I don't exercise</option>
+                      <option value=".5">1 day/week</option>
+                      <option value="1">2 days/week</option>
+                      <option value="1.25">3 days/week</option>
+                      <option value="1.5">4 days/week</option>
+                      <option value="1.75">5 days/week</option>
+                      <option value="2">6 days/week</option>
+                      <option value="2.25">7 days/week</option>
+                    </select>
+                  </div>
+                </div><!-- .form-group -->
+
+                <div class="form-group">                  
+                  <label class="col-xs-5" for="exerciseMin">Mins/Day: </label>
+                  <div class="col-xs-6 no-padding-left">
+                    <select id="exerciseMin" class="no-padding form-control input-sm" name="exerciseMin"> 
+                      <option value="">--Select--</option>
+                      <option value=".5">0 - 30 mins/day</option>
+                      <option value=".75">30 - 60 mins/day</option>
+                      <option value="1">60 - 90 mins/day</option>
+                      <option value="1.25">90 - 120 mins/day</option>
+                      <option value="1.5">120+ mins/day</option>
+                    </select>
+                  </div>
+                </div><!-- .form-group -->
+
+                <div class="form-group">                  
+                  <label class="col-xs-5" for="exerciseLevel">Intensity: </label>
+                  <div class="col-xs-6 no-padding-left">
+                    <select id="exerciseLevel" class="no-padding form-control input-sm" name="exerciseLevel"> 
+                      <option value="">--Select--</option>
+                      <option value=".5">Light</option>
+                      <option value="1">Moderate</option>
+                      <option value="1.25">Difficult</option>
+                      <option value="1.5">Spartan</option>
+                    </select>
+                  </div>
+                </div><!-- .form-group -->
+
+                <!-- ====== Messages ====== -->
+                <div class="form-group">
+                  <div class="col-xs-11 col-xs-offset-1">
+                    <div id="tdc-customError" class="error-messages"></div>
+                    <div id="tdc-errors" class="error-messages"></div>
+                  </div>
+                </div>
+
+                <hr class="hr-full">
+
+                <!-- ====== Submit ====== -->
+                <div class="form-button">
+                  <a id="calculate-tdc" class="btn btn-default" href="#tdc-panel">Calculate TDC</a>
+                </div>                     
+              </form> <!-- #tdc-form -->
+
+              <!-- ====== TDC Result ====== -->
+              <form id="tdc-resultForm" class="form-horizontal text-center">
+                <div class="form-group text-center">
+                  <h3>Total Daily Calories:</h3>
+                  <p id="tdc-result" class="col-xs-12"></p>
+                </div><!-- .form-group -->
+
+                <!-- <p class="form-text text-justify">This number is an estimate of the total amount of calories you burn every day. Keep in mind that this is only an estimate as it is really difficult to precisely determine this number. Now that we know your total daily calories, the next step is setting your weight goals.</p> -->
+
+                <p class="form-text text-justify">Now that we know your total daily calories, the next step is to determine you weight goals.</p>
+
+                <a class="form-text" href="#goal">Scroll To Next Section</a>  
+
+                <hr class="hr-full">
+
+                <div class="form-button">
+                  <a id="recalculate-tdc" class="btn btn-default" href="#tdc-panel">Recalculate TDC</a>
+                </div>                       
+              </form> <!-- #tdc-resultForm -->
+
+            </div> <!-- .panel-body -->
+          </div> <!-- #tdc-panel -->
+        </div> <!-- panel wrapper -->
+      </div><!-- #activity -->
+
+
+<!-- GOAL SECTION 
+===========================================-->      
+      <div id="goal" class="section-wrapper row">
+        <h1 class="section-header">Weight Goals</h1>
+
+        <div class="col-md-12">
+          <div class="text-container text-justify">In the previous section, you estimated the total amount of calories your body burns on a daily basis. Now depending on your weight goals, you will either add or subtract from that number. I highly encourage you to not get greedy and add or subtract more than 20% of your total daily calories expecting to see faster results. This will only shock your body and could lead to health concerns. The key to achieving your goal is consistency and patience. The form below will allow you to set a safe goal at three different intensity levels.</div>
+        </div>
+
+        <div class="col-md-12 panel-wrapper">
+          <div id="goal-panel" class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">Set Weight Goals</h3>
+            </div>
+
+            <div class="panel-body">
+              <form id="goal-form" class="form-horizontal">
+
+                <!-- ====== TDC Result ====== -->
+                <div class="form-group">
+                  <label class="no-padding-right col-xs-3">TDC:</label>
+                  <a href="#tdc-panel"><p id="tdc-result1" class="col-xs-8 no-padding">Complete TDC Form</p></a>
+                </div>
+
+                <!-- ====== Weight Goal ====== -->
+                <div class="form-group">
+                  <label class="col-xs-12">Select your weight goal:</label>               
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="weightGoal" id="goal1">
+                    <label for="goal1">Fat Loss</label>
+                  </div>
+
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="weightGoal" id="goal2">
+                    <label for="goal2">Maintain</label>
+                  </div>
+
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="weightGoal" id="goal3">
+                    <label for="goal3">Bulking</label>
+                  </div>
+                </div><!-- .form-group -->
+
+                <!-- ====== Intensity ====== -->
+                <div class="form-group">
+                  <label class="col-xs-12">Select your intensity:</label>               
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="goalIntensity" id="intensity1">
+                    <label for="intensity1">Cautious</label>
+                  </div>
+
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="goalIntensity" id="intensity2">
+                    <label for="intensity2">Suggested</label>
+                  </div>
+
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="goalIntensity" id="intensity3">
+                    <label for="intensity3">Aggressive</label>
+                  </div>
+                </div><!-- .form-group -->
+              
+                <!-- ====== Messages ====== -->
+                <div class="form-group">
+                  <div class="col-xs-11 col-xs-offset-1">
+                    <div id="goal-customError" class="error-messages"></div>
+                    <div id="goal-errors" class="error-messages"></div>
+                  </div>
+                </div>
+
+                <hr class="hr-full">
+
+                <!-- ====== Submit ====== -->
+                <div class="form-button">
+                  <a id="calculate-goal" class="btn btn-default" href="#goal-panel">Calculate Goal</a>
+                </div>                     
+              </form> <!-- #goal-form -->
+
+              <!-- ====== Goal Result ====== -->
+              <form id="goal-resultForm" class="form-horizontal text-center">
+                <div class="form-group text-center">
+                  <h3>Daily Calories Goal:</h3>
+                  <p id="goal-result" class="col-xs-12"></p>
+                </div><!-- .form-group -->
+
+                <!-- <p class="form-text text-justify">Based on your weight goal, this number is the total amount of calories you should eat every day. Don't expect to see results right away. The key to achieving your goal is consistency and patience. The next step is to determine your macronutrient numbers. While this step isn't necessary, it is highly recommended.</p> -->
+
+                <p class="form-text text-justify">Now that you have set your weight goals, the next step is to convert your calories into macronutrients.</p>
+
+                <a class="form-text" href="#macro">Scroll To Next Section</a>
+
+                <hr class="hr-full">  
+
+                <div class="form-button">
+                  <a id="recalculate-goal" class="btn btn-default" href="#goal-panel">Recalculate Goal</a>
+                </div>                       
+              </form> <!-- #tdc-resultForm -->
+
+            </div> <!-- .panel-body -->
+          </div> <!-- #goal-panel -->
+        </div> <!-- panel wrapper -->
+      </div><!-- #goal -->
+
+
+<!-- MACRO SECTION 
+===========================================-->      
+      <div id="macro" class="section-wrapper row">
+        <h1 class="section-header">Macros</h1>
+
+        <div class="col-md-12">
+          <div class="text-container text-justify">In this section you will learn how to convert calories into macronutrients. There are three major macronutrients that the body needs: fats, protein and carbohyrdates. One gram of fat is equal to 9 calories while one gram of protein/carbs is equal to 4 calories. Knowing this will allow you to calculate how many grams of fat, protein and carbs you need to eat on a daily basis. In the form below I have set up some ratios that you can use for estimates. Everyone's body is different so I reccommended that you experiment with different ratios until you find something that works best for you.</div>
+        </div>
+
+        <div class="col-md-12 panel-wrapper">
+          <div id="macro-panel" class="panel">
+            <div class="panel-heading">
+              <h3 class="panel-title">Calculate Macros</h3>
+            </div>
+
+            <div class="panel-body">
+              <form id="macro-form" class="form-horizontal">
+
+                <!-- ====== TDC Result ====== -->
+                <div class="form-group">
+                  <label class="no-padding-right col-xs-3">Goal:</label>
+                  <a href="#goal-panel"><p id="goal-result1" class="col-xs-8 no-padding">Complete Goal Form</p></a>
+                </div>
+
+                <!-- ====== Nutrition Plan ====== -->
+                <div class="form-group">
+                  <label class="col-xs-12">Select nutrition plan:</label>               
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="nutritionPlan" id="plan1" class="nutritionPlan">
+                    <label for="plan1">Suggested</label>
+                  </div>
+
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="nutritionPlan" id="plan2" class="nutritionPlan">
+                    <label for="plan2">Low Fat</label>
+                  </div>
+
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="nutritionPlan" id="plan3" class="nutritionPlan">
+                    <label for="plan3">Low Carb</label>
+                  </div>
+
+                  <div class="radio-control col-xs-12">
+                    <input type="radio" name="nutritionPlan" id="plan4" class="nutritionPlan">
+                    <label for="plan4">Custom Ratios</label>
+                  </div>
+                </div><!-- .form-group -->
+
+                <!-- ====== Custom Ratios ====== -->
+                <div id="customRatio" class="form-group">
+                  <label class="col-xs-4 text-center">Fat</label>
+                  <label class="col-xs-4 text-center">Protein</label>
+                  <label class="col-xs-4 text-center">Carbs</label>
+
+                  <div class="col-xs-4">
+                    <div class="ratioBox">
+                      <input type="number" class="no-padding form-control input-sm ratioInput" id="ratioFat" placeholder="%" name="fat">
+                    </div>
+                  </div>
+
+                  <div class="col-xs-4">
+                    <div class="ratioBox">
+                      <input type="number" class="no-padding form-control input-sm ratioInput" id="ratioProtein" placeholder="%" name="protein">
+                    </div>
+                  </div>
+
+                  <div class="col-xs-4">
+                    <div class="ratioBox">
+                      <input type="number" class="no-padding form-control input-sm ratioInput" id="ratioCarbs" placeholder="%" name="carbs">
+                    </div>
+                  </div>
+                </div><!-- #customRatio .form-group -->
+
+                <!-- ====== Messages ====== -->
+                <div class="form-group">
+                  <div class="col-xs-11 col-xs-offset-1">
+                    <div id="macro-customError" class="error-messages"></div>
+                    <div id="macro-errors" class="error-messages"></div>
+                  </div>
+                </div>
+
+                <hr class="hr-full">
+
+                <!-- ====== Submit ====== -->
+                <div class="form-button">
+                  <a id="calculate-macro" class="btn btn-default" href="#macro-panel">Calculate Macros</a>
+                </div>                     
+              </form> <!-- #macro-form -->
+
+              <!-- ====== Macro Result ====== -->
+              <form id="macro-resultForm" class="form-horizontal text-center">
+                <div class="form-group text-center">
+                  <h3>Daily Macronutrients:</h3>
+                  <p id="macro-result" class="col-xs-12"></p>
+                </div><!-- .form-group -->
+
+                <div class="form-group">
+                  <label class="col-xs-4 text-center">Fat</label>
+                  <label class="col-xs-4 text-center">Protein</label>
+                  <label class="col-xs-4 text-center">Carbs</label>
+
+                  <div class="col-xs-4">
+                    <!-- <p class="ratioResult">69</p> -->
+                    <div class="ratioBox">
+                      <input type="number" class="no-padding form-control input-sm ratioInput" id="resultFat" disabled>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-4">
+                    <!-- <p class="ratioResult">143</p> -->
+                    <div class="ratioBox">
+                      <input type="number" class="no-padding form-control input-sm ratioInput" id="resultProtein" disabled>  
+                    </div>
+                  </div>
+
+                  <div class="col-xs-4">
+                    <!-- <p class="ratioResult">301</p> -->
+                    <div class="ratioBox">
+                      <input type="number" class="no-padding form-control input-sm ratioInput" id="resultCarbs" disabled>
+                    </div>
+                  </div>
+                </div><!-- .form-group -->
+
+                <br/>
+
+                <!-- <p class="form-text text-justify">These numbers are the total amount of grams you should eat every day for each macronutrient. You should also have a daily intake of 20 to 30 grams of fiber. Rather than adding your fiber to your macros, you subtract them from your carbs. Remember that these numbers are only estimates. If you have any health concerns I highly reccommend that you consult a doctor.</p> -->
+                <h3 class="text-center">Congratulations!</h3>
+                <p class="form-text text-justify">You have successfully created a personalized diet plan. You can review it in the next section and learn about the next steps.</p>
+
+                <a class="form-text" href="#review">Scroll To Next Section</a>
+
+                <hr class="hr-full">  
+
+                <div class="form-button">
+                  <a id="recalculate-macro" class="btn btn-default" href="#macro-panel">Recalculate Macros</a>
+                </div>                       
+              </form> <!-- #macro-resultForm -->
+
+            </div> <!-- .panel-body -->
+          </div> <!-- #macro-panel -->
+        </div> <!-- panel wrapper -->
+      </div><!-- #macro -->
+
+
+<!-- REVIEW SECTION 
+===========================================-->      
+      <div id="review" class="section-wrapper row">
+        <h1 class="section-header">Review</h1>
+        
+        <br/>
+        
+        <h3>This Section Is Under Construction</h3>
+
+        <br/>
+        
+        <a class="form-text" href="#bmr">Scroll To BMR Section</a>
+
+        <a class="form-text" href="#activity">Scroll To Activty Section</a>
+
+        <a class="form-text" href="#goal">Scroll To Goal Section</a>
+
+        <a class="form-text" href="#macro">Scroll To Macro Section</a>
+        <!-- <div class="text-container">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div> -->
+      </div>
+
+
+<!-- CONTACT SECTION 
+===========================================-->
+      <div id="contact" class="section-wrapper">
+        <ul class="list-unstyled absolute-center contact-info">
+          <li><h1>Contact Information</h1></li>
+          <li><a href="mailto:trentmentink@gmail.com"><span class="fa fa-envelope-square fa-fw"></span>trentmentink@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/pub/trent-mentink/90/4b8/b58"><span class="fa fa-linkedin-square fa-fw"></span>Linkedin Profile</a></li>
+          <a href="../"><img class="logo" src="../img/logo.png"></a>
+        </ul>   
+      </div> <!-- #contact -->
+
+    </div> <!-- .fluid-container -->
+
+<!-- SCRIPTS
+===========================================-->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../js/vendor/jquery-2.1.4.min.js">\x3C/script>')</script>
+    
+    <!-- jQuery enhancement -->
+    <script src="../js/vendor/resize.min.js"></script>
+    
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script> $.fn.modal || document.write('<script src="../js/vendor/bootstrap/bootstrap.min.js">\x3c/script>')</script>
+
+    <!-- formValidation JavaScript -->
+    <script src="../js/vendor/formvalidation/formValidation.min.js"></script>
+    <script src="../js/vendor/formvalidation/bootstrap.min.js"></script>
+
+    <!-- imagesLoaded JavaScript -->
+    <script src="../js/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Magnific Popup JavaScript -->
+    <script src="../js/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Transit JavaScript -->
+    <script src="../js/vendor/transit/transit.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/health/health.js?v=3.8"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61198037-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>

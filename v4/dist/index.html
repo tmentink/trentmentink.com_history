@@ -1,0 +1,198 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Trent Mentink | Web Design & Development</title>
+    <meta name="description" content="Need a responsive website that looks great on all devices? Trent Mentink is a web developer experienced in building beautiful and intuitive, mobile-first websites.">
+    <meta name="author" content="Trent Mentink">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">   
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="css/main.min.css?v=1.0.1">
+    
+    <!-- Modernizer --> 
+    <script src="js/vendor/modernizr/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  </head>
+  <body ontouchstart=""> <!-- fixes :active css tag in iOS -->
+
+<!-- OUTDATED BROWSER
+===========================================-->
+    <div id="outdated">
+      <h6>Your browser is out-of-date!</h6>
+      <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+      <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+    </div>
+
+
+<!-- LOADING SCREEN
+===========================================-->
+  <!--[if gt IE 9]><!-->
+    <div id="loading-screen" class="loader loader--loading">
+      <img class="loader__img" src="img/layout/logo.png">
+      <div class="loader__section loader__section--left"></div>
+      <div class="loader__section loader__section--right"></div>
+    </div>
+  <!--<![endif]-->
+
+
+<!-- INTRO SECTION 
+===========================================-->
+    <div class="container-fluid">
+    
+      <section class="transition">
+          <img class="img img--landscape" src="img/layout/orion.png">
+          <img class="img img--portrait" src="img/layout/mobile/orion.png">
+      </section>
+
+      <section id="intro">
+        <img class="img img--landscape img--top-fix" src="img/layout/intro.png">
+        <img class="img img--portrait img--top-fix" src="img/layout/mobile/intro.png">
+      </section>
+
+
+<!-- MENU SECTION 
+===========================================-->
+      <div id="main-menu-button" class="hamburger-button hamburger-button--mobile-only"><span class="hamburger-button__span"></span><span class="hamburger-button__span"></span><span class="hamburger-button__span"></span><span class="hamburger-button__span"></span><span class="hamburger-button__span"></span><span class="hamburger-button__span"></span></div>
+
+      <div id="main-menu-wrapper">
+        <div id="main-menu" class="responsive-menu responsive-menu--fullscreen responsive-menu--hidden responsive-menu--with-brand">
+          <span class="responsive-menu__brand"><a class="responsive-menu__link" href=".">Trent Mentink</a></span>
+          
+          <div class="responsive-menu__item-wrapper">
+            <span class="responsive-menu__item responsive-menu__item--full-width"><a class="responsive-menu__link" href="#about">About</a></span>
+            <span class="responsive-menu__item responsive-menu__item--full-width"><a class="responsive-menu__link" href="https://drive.google.com/file/d/0B8oy1SPl4y8uX2FKSExWY2dIbm8/view?usp=sharing" target="_blank">Resume</a></span>
+            <span class="responsive-menu__item responsive-menu__item--full-width"><a class="responsive-menu__link" href="#projects-header">Projects</a></span>
+            <span class="responsive-menu__item responsive-menu__item--full-width"><a class="responsive-menu__link" href="#artwork">Artwork</a></span>
+            <span class="responsive-menu__item responsive-menu__item--full-width"><a class="responsive-menu__link" href="#contact">Contact</a></span>
+            <span class="responsive-menu__item responsive-menu__item--empty"></span>
+          </div>
+        </div>
+      </div>
+
+
+<!-- ABOUT SECTION 
+===========================================-->
+      <section id="about"> 
+        <h1 class="section-header">About</h1>
+
+        <div class="text-container">
+          <p>
+            My name is Trent Mentink and I am a self-taught web developer experienced in crafting beautiful and intuitive, mobile-first websites.
+            After graduating from Cal Poly with a business major, I decided I wanted to learn computer programming.
+            This decision led me through several months of intensive self-study before ultimately starting my career as a web developer.
+            I'm very passionate about what I do which is why I never stop learning and work hard everyday at mastering my craft. 
+            To read more about my work experience you can follow the link to <a class="link link--underline" href="https://drive.google.com/file/d/0B8oy1SPl4y8uX2FKSExWY2dIbm8/view?usp=sharing" target="_blank">my resume</a>. 
+          </p>
+        </div>
+      </section>
+
+
+<!-- PROJECTS SECTION 
+===========================================-->
+      <section id="projects">
+        <img class="img img--landscape img--top-fix" src="img/layout/undercliff.png">
+        <img class="img img--portrait img--top-fix" src="img/layout/mobile/undercliff.png">
+
+        <h1 id="projects-header" class="section-header">Projects</h1>
+
+        <div class="text-container">
+          <p>
+            Whether it's freelace work for a client or experimenting with new techniques and technologies, I am always staying busy with personal projects. 
+            Here is some of my favorite work that I have done in the past. 
+            If you would like to see more, you can check out my <a class="link link--text-color link--underline" href="https://github.com/tmentink" target="_blank">github account</a>. 
+            If you are interested in my services or have an idea for the next great app, please feel free to <a class="link link--text-color link--underline" href="#contact">contact me below.</a>
+          </p>
+        </div>
+
+        <div id="project-wrapper" class="card-deck-wrapper"></div>
+
+        <img class="img img--landscape img--bot-fix" src="img/layout/hiking.png">
+        <img class="img img--portrait img--bot-fix" src="img/layout/mobile/hiking.png">
+      </section>
+
+
+<!-- GALLERY SECTION 
+===========================================-->
+      <section id="artwork">
+        <h1 class="section-header">Artwork</h1>
+
+        <div class="text-container">
+          <p>
+            "Art enables us to find ourselves and lose ourselves at the same time." 
+            This quote by Thomas Merton embodies what I love about art. 
+            For me, drawing is a form of meditation that allows me to explore new ideas and visit places I have never been.  
+            Below is a collection of some of my favorite pieces of artwork. 
+            More images are available upon filtering.
+            If you are interested in any prints you can <a class="link link--underline" href="#contact">contact me below.</a> 
+          </p>
+        </div>
+
+        <div id="artwork-menu-wrapper">
+          <div id="artwork-menu-button" class="button button--text">Filter Artwork <i class="fa fa-filter"></i></div>
+          <div id="artwork-menu" class="responsive-menu responsive-menu--fullscreen responsive-menu--hidden"></div> 
+        </div>
+        
+        <div id="artwork-wrapper"></div>
+      </section>
+
+
+<!-- OUTRO SECTION 
+===========================================-->
+      <section class="transition">
+          <img class="img img--landscape" src="img/layout/virgo.png">
+          <img class="img img--portrait" src="img/layout/mobile/virgo.png">
+      </section>
+
+      <section id="outro">
+        <img class="img img--landscape img--top-fix" src="img/layout/campsite.png">
+        <img class="img img--portrait img--top-fix" src="img/layout/mobile/campsite.png">
+      </section>      
+
+
+<!-- CONTACT SECTION 
+===========================================-->
+      <section id="contact">
+        <h1 class="section-header">Get In Touch</h1>
+
+        <div class="text-container">
+          <p>If I am not busy exploring the outdoors then I am always open to new and exciting projects.</p>
+          <hr class="hr hr--75">
+          <p class="no-margin"> Send your email to</p>
+          <p><a class="link" href="mailto:trentmentink@gmail.com">trentmentink@gmail.com</a></p>
+        </div>
+
+        <a class="button button--icon" href="mailto:trentmentink@gmail.com"><i class="fa fa-envelope-square"></i></a>
+        <a class="button button--icon" href="https://www.instagram.com/tmentink/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a class="button button--icon" href="https://www.linkedin.com/pub/trent-mentink/90/4b8/b58" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+        <a class="button button--icon" href="https://github.com/tmentink" target="_blank"><i class="fa fa-github-square"></i></a>
+        
+        <footer>&copy; 2017 Trent Mentink</footer> 
+      </section>
+
+    </div> <!-- .container-fluid -->
+
+
+<!-- SCRIPTS
+===========================================-->
+    <!-- jQuery Core -->   
+    <!--[if lt IE 9]>
+      <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery/jquery-1.12.3.min.js"><\/script>')</script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+      <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery/jquery-2.2.3.min.js"><\/script>')</script>
+    <!--<![endif]-->
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.min.js?v=1.0.1"></script>
+  </body>
+</html>

@@ -1,0 +1,184 @@
+
+// ===========================================
+// Responsive Menu
+// ===========================================
+
+
+// Structure
+// ===========================================
+  .responsive-menu {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  // States
+  .responsive-menu--fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .responsive-menu--sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+  .responsive-menu--hidden {
+    display: none;
+  }
+
+
+  .responsive-menu__brand {
+    display: inline-block;
+    width: 25%;
+    float: left;
+
+    @include bp-max-width(1024px) {
+      display: none;
+    }
+  }
+
+
+  .responsive-menu__item-wrapper {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+
+    @include bp-max-width(1024px) {
+      @include absolute-center;
+    }
+
+    @include bp-landscape-tablet {
+      width: 100%;
+    }
+
+    @include bp-min-width(1024px) {
+      width: 100%;
+    }
+  }
+
+  @include bp-min-width(1025px) {
+    .responsive-menu--with-brand {
+      .responsive-menu__item-wrapper {
+        width: 75%;
+      }
+    }
+  }
+  
+
+  .responsive-menu__item {
+    display: table-row;
+    text-align: left;
+
+    @include bp-landscape-tablet {
+      display: inline-block;
+      margin-left: 12.5%;
+      width: 30%;
+    }
+
+    @include bp-min-width(1025px) {
+      display: inline-block;
+      margin-left: rem(30px);
+    }
+  }
+
+  @include bp-min-width(1025px) {
+    .responsive-menu__item--full-width {
+      display: table-cell;
+    }
+  }
+
+  .responsive-menu__item--empty {
+    visibility: hidden;
+
+    @include bp-min-width(1025px) {
+      display: none;
+    }
+  }
+
+  .responsive-menu__link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    white-space: nowrap;
+    text-decoration: none;
+    outline: 0;
+
+    @include bp-min-width(1025px) {
+      text-align: center;
+    }
+
+    .fa {
+      margin-right: rem(12.5px);
+    }
+  }
+
+
+// Font
+// ===========================================
+  .responsive-menu__brand,
+  .responsive-menu__item {
+    font-family: $font-family-secondary;
+    font-size: rem(30px);
+    line-height: (60px / 30px);
+
+    @include bp-min-width(768px) {
+      font-size: rem(45px);
+    }
+
+    @include bp-min-width(1025px) {
+      font-size: rem(35px);
+    }
+
+    .fa {
+      font-size: rem(25px);
+
+      @include bp-min-width(768px) {
+        font-size: rem(40px);
+      }
+
+      @include bp-min-width(1025px) {
+        font-size: rem(30px);
+      }
+    }
+  }
+
+
+// Effects
+// ===========================================
+  // transition interferes with mobile velocity animations
+  @include bp-min-width(1025px) {
+    @include shrink-on-active("responsive-menu__brand");
+    @include shrink-on-active("responsive-menu__item");
+
+    .responsive-menu__brand,
+    .responsive-menu__item,
+    .responsive-menu__link {
+      @include transition("transform, color", 0.2s, "ease-in-out");
+    }
+  }
+
+
+// Color
+// ===========================================
+  .responsive-menu__brand,
+  .responsive-menu__link {
+    color: $color-text;
+
+    &:hover {
+      color: color-shade(text, dark);
+    }
+
+    &:active {
+      color: color-shade(text, x-dark);
+    }
+  }
+
+
+
+  

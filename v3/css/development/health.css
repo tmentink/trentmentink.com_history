@@ -1,0 +1,20 @@
+
+
+/*=================================
+  =Directory - health.css
+  =================================*/
+
+  /* Structure
+  ---------------------------------*/
+  .health-link {
+    margin: 75px auto 125px;
+  }
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    .health-link {
+      margin: 100px auto;
+    }
+  }
+
+
+
+

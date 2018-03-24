@@ -1,0 +1,108 @@
+
+// ===========================================
+// Buttons
+// ===========================================
+
+
+// Structure
+// ===========================================
+  .button {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;   
+    white-space: nowrap;
+    @include no-select;
+  }
+
+  .button--accent,
+  .button--outline {
+    padding: rem(12.5px);
+    border: rem(1px) solid transparent;
+    border-radius: rem(10px);
+  }
+
+
+// Font
+// ===========================================
+  .button {
+    font-size: rem(20px);
+  }
+
+  .button--accent,
+  .button--outline,
+  .button--text {
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+
+// Effects
+// ===========================================  
+  @include shrink-on-active("button");
+
+  .button {
+    @include transition("transform, color, border", 0.2s, "ease-in-out");
+  }
+  
+
+// Color
+// ===========================================
+  .button--accent {
+    background: $color-accent;
+    border-color: color-shade(accent, dark);
+    color: $color-text;
+
+    &:hover {
+      background: color-shade(accent, light);
+    }
+
+    &:active {
+      background: color-shade(accent, dark);
+      border-color: color-shade(accent, x-dark);
+    }
+  }
+
+
+  .button--text {
+    background: transparent;
+    color: color-shade(text);
+
+    &:hover {
+      color: color-shade(text, dark);
+    }
+
+    &:active {
+      color: color-shade(text, x-dark);
+    }
+  }
+
+
+  .button--outline {
+    background: transparent;
+    border-color: $color-text;
+    color: $color-text;
+
+    &:hover {
+      background: $color-text;
+      color: $color-accent;
+    }
+
+    &:active {
+      background: rgba($color-text, 0.9);
+    }
+  }
+
+
+  .button--icon {
+    color: color-shade(links, dark);
+
+    &:hover {
+      color: color-shade(links);
+    }
+
+    &:active {
+      color: color-shade(links, xx-dark);
+    }
+  }
+
+

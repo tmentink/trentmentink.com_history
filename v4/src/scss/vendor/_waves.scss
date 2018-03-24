@@ -1,0 +1,59 @@
+
+// ===========================================
+// Waves
+// ===========================================
+
+// Structure
+// ===========================================
+  .waves-effect {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-tap-highlight-color: transparent;
+    @include no-select;
+
+    .waves-ripple {
+      margin-top: rem(-50px);
+      margin-left: rem(-50px);
+      width: rem(100px);
+      height: rem(100px);
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0;
+      pointer-events: none;
+      @include transition("all", 0.5s, "ease-out");
+    }
+  }
+
+// Utility
+// ===========================================
+  // these are here since they only apply to waves
+  @function waves-gradient($color) {
+    @return rgba($color, 0.2) 0, rgba($color, 0.3) 40%, rgba($color, 0.4) 50%, rgba($color, 0.5) 60%, rgba(255,255,255, 0) 70%; 
+  }
+
+  @mixin radial-gradient($gradient) {
+    background: -webkit-radial-gradient($gradient);
+    background:         radial-gradient($gradient);
+  }
+
+
+// Color
+// ===========================================
+  // defeault color is black
+  .waves-effect {
+    .waves-ripple {
+      background: rgba($black, 0.2);
+      @include radial-gradient(waves-gradient($black));
+    }
+  }
+
+  .waves-effect.waves--white {
+    .waves-ripple {
+      background: rgba($white, 0.2);
+      @include radial-gradient(waves-gradient($white));
+    }
+  }
+
+

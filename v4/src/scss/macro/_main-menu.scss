@@ -1,0 +1,37 @@
+
+// ===========================================
+// Main Menu
+// ===========================================
+
+
+// Structure
+// ===========================================  
+  #main-menu {
+    border-bottom: rem(1px) solid transparent;
+
+    .responsive-menu__item-wrapper {
+      max-width: rem(1200px);
+    }
+  }
+
+
+// Color
+// ===========================================
+  #main-menu {
+    background: $color-primary;
+    border-bottom-color: rgba($white, 0.2);
+
+    @include bp-max-width(1024px) {
+      background: color-shade(links, x-dark);
+      border-bottom-color: transparent;
+    }
+  }
+
+  #main-menu-button {
+    background: $color-primary;
+
+    .hamburger-button__span {
+      background: $color-text;
+    }
+  } 
+

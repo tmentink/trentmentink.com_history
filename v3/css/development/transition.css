@@ -1,0 +1,49 @@
+
+
+/*=================================
+  =Directory - transition.css
+  =================================*/
+
+  .transition-img {
+    display: none;
+  }
+
+  /* Mobile Landscape
+  ---------------------------------*/
+  @media all and (orientation:landscape) and (max-width: 750px) { 
+    .transition-img {
+      display: block;
+    }
+    .mobile-transition-img {
+      display: none;
+    }
+  }
+
+
+  /* Tablet Landscape
+  ---------------------------------*/
+  @media all and (orientation:landscape) and (min-width: 768px) and (max-width: 1024px) {   
+    .transition-img {
+      display: block;
+    }
+    .mobile-transition-img {
+      display: none;
+    }
+  }
+
+
+  /* Desktop
+  ---------------------------------*/
+  @media all and (min-width: 800px) {
+    .transition-img {
+      display: block;
+    }
+    .mobile-transition-img {
+      display: none;
+    }
+  }
+
+
+
+
+

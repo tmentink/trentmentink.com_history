@@ -1,0 +1,118 @@
+
+// ===========================================
+// Loader
+// ===========================================
+
+
+// Structure
+// ===========================================
+  .loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+  }
+
+  .loader__img {
+    display: block;
+    height: rem(150px);
+    width: rem(150px);
+    margin-top: rem(-75px);
+    margin-left: rem(-75px);
+    @include absolute-center;
+    z-index: 2002;
+
+    @include bp-min-width(768px) {
+      width: rem(200px);
+      height: rem(200px);
+      margin-top: rem(-100px);
+      margin-left: rem(-100px);
+    }
+  }
+
+  .loader__section {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 51%;
+    z-index: 2001;
+  }
+
+  .loader__section--left {
+    left: 0;
+  }
+
+  .loader__section--right {
+    right: 0;
+  }
+
+
+// Animation
+// ===========================================
+  @-webkit-keyframes spin {
+    0%   { 
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    0%   { 
+      -webkit-transform: rotate(0deg);  
+              transform: rotate(0deg);  
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+
+
+  .loader--loading {
+    .loader__img {
+      -webkit-animation: spin 2s linear infinite;
+              animation: spin 2s linear infinite;
+    }
+  }
+
+
+// Loaded
+// ===========================================
+  .loader--loaded {
+    visibility: hidden;
+
+    .loader__img {
+      opacity: 0;
+      -webkit-transition: all 0.3s ease-out;
+              transition: all 0.3s ease-out;
+    }
+
+    .loader__section--left {
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+              transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loader__section--right {
+      -webkit-transform: translateX(100%);
+              transform: translateX(100%); 
+
+      -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+              transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+  }
+
+// Color
+// ===========================================
+  .loader__section {
+    background: $color-primary;
+  }
+
+

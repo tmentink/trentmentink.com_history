@@ -1,0 +1,50 @@
+
+// ===========================================
+// Body / HTML
+// ===========================================
+
+
+// Structure
+// ===========================================	
+	// switch to border-box
+	html {
+	  -webkit-box-sizing: border-box;
+	          box-sizing: border-box;
+	}
+	*,
+	*::before,
+	*::after {
+	  -webkit-box-sizing: inherit;
+	          box-sizing: inherit;
+	}
+
+	// hide scrollbars
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	// default to center alignment
+	html,
+	body {
+		text-align: center;
+	}
+
+
+// Font
+// ===========================================
+  html,
+  body {
+    font-family: $font-family-primary;
+    font-size: $font-size--base;
+    line-height: ($line-height--base / $font-size--base); 
+  }
+
+
+// Color
+// ===========================================
+  html,
+  body {
+    background: $color-primary;
+    color: $color-text;
+  }
+

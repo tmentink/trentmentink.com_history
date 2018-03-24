@@ -1,0 +1,140 @@
+
+// ===========================================
+// Artwork Item
+// ===========================================
+
+
+// Structure
+// ===========================================
+  .artwork-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    float: left;
+  }
+
+  .artwork-item__overlay {
+    display: none;
+
+    @include bp-min-width-md {
+      display: block;
+    }
+  }
+
+  .artwork-item__thumb,
+  .artwork-item__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .artwork-item__thumb {
+    z-index: 0;
+  }
+
+  .artwork-item__overlay {
+    z-index: 1;
+  }
+
+  .artwork-item__text {
+    width: 90%;
+    margin-top: -5%;
+
+    @include absolute-center;
+  }
+
+  .artwork-item__title {
+    margin-bottom: rem(5px);
+  }
+
+  .artwork-item__tags {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+
+    .fa, 
+    span {
+      margin-right: rem(5px);
+      padding-bottom: rem(1px);
+    }
+  }
+
+
+// Sizing
+// ===========================================
+  .artwork-item {
+    padding-bottom: 50%;
+    width: 50%;
+
+    @include bp-landscape-phone {
+      padding-bottom: 25%;
+      width: 25%;
+    }
+
+    @include bp-min-width-sm {
+      padding-bottom: 25%;
+      width: 25%;
+    }
+  }
+
+
+// Font
+// ===========================================  
+  .artwork-item__title {
+    font-family: $font-family-secondary;
+    font-size: rem(30px);
+
+    @include bp-min-width-lg {
+      font-size: rem(34px);
+    }
+
+    @include bp-min-width-xl {
+      font-size: rem(38px);
+    }
+  }
+
+  .artwork-item__desc,
+  .artwork-item__tags {
+    @include bp-min-width-lg {
+      font-size: rem(18px);
+    }
+
+    @include bp-min-width-xl {
+      font-size: rem(22px);
+    }
+  }
+
+
+// Effects
+// ===========================================
+  .artwork-item__overlay {
+    opacity: 0;
+    @include transition("opacity", 0.4s, "ease-out");
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .artwork-item__tags {
+    span {
+      border-bottom: rem(1px) solid transparent;
+      @include transition("border, color", 0.4s, "ease-out");
+
+      &:hover {
+        color: color-shade(text, x-dark);
+        border-bottom-color: color-shade(text, x-dark);
+      }
+    }
+  }
+
+
+// Color
+// ===========================================
+  .artwork-item__overlay {
+    background: color-shade(links, x-dark);
+  }
+
+

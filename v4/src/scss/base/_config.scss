@@ -1,0 +1,112 @@
+
+// ===========================================
+// Global Config
+// ===========================================
+
+
+/* Formatting Rules
+   ===========================================
+ 
+   Use BEM naming convention --> http://getbem.com/naming/
+
+   Groups:
+   -------------
+    1. Structure
+    2. Font
+    3. Effects
+    4. Color
+
+   Properties:
+   -------------
+    1. Display & Box Model (padding/border/margin)
+    2. Height & Width
+    3. Positioning
+    4. Alphabetical
+    5. Mixins
+    6. Media Queries
+
+ */
+
+
+// Font
+// ===========================================
+  // Google Font URL
+  $font-url--google  : "http://fonts.googleapis.com/css?family=Lato:400,400i,700|Neuton:700";
+
+  // Font Families
+  $font-family-primary    : "Lato", "Helevtica Neue", Helvetica, Arial, sans-serif;
+  $font-family-secondary  : "Neuton", serif;
+
+  // Font Size
+  $font-size--base   : 16px;
+  $line-height--base : 22px;
+
+
+// Color
+// ===========================================
+  // Base Colors
+  $black       : #000000;
+  $white       : #FFFFFF;
+
+  // Theme Colors
+  $bismark     : #496e82;
+  $charade     : #292b35;
+  $faded-jade  : #478378;
+  $lotus       : #883F3F;
+  $papaya-whip : #FFF0D2;
+  $tradewind   : #69AEA1;
+
+  // Color Usage
+  $color-primary    : $charade;
+  $color-secondary  : $bismark;
+  $color-accent     : $lotus;
+  $color-links      : $tradewind;
+  $color-text       : $papaya-whip;
+
+  // Color Shades
+  $color-shades: (
+    primary: (
+      xx-light : lighten($color-primary, 24%),
+      x-light  : lighten($color-primary, 12%),
+      light    : lighten($color-primary, 6%),
+      base     : $color-primary
+    ),
+    secondary: (
+      xx-light : lighten($color-secondary, 24%),
+      x-light  : lighten($color-secondary, 12%),
+      light    : lighten($color-secondary, 6%),
+      base     : $color-secondary,
+      dark     : darken($color-secondary, 6%),
+      x-dark   : darken($color-secondary, 12%),
+      xx-dark  : darken($color-secondary, 24%)
+    ),
+    accent: (
+      xx-light : lighten($color-accent, 24%),
+      x-light  : lighten($color-accent, 12%),
+      light    : lighten($color-accent, 6%),
+      base     : $color-accent,
+      dark     : darken($color-accent, 6%),
+      x-dark   : darken($color-accent, 12%),
+      xx-dark  : darken($color-accent, 24%)
+    ),
+    links: (
+      xx-light : lighten($color-links, 24%),
+      x-light  : lighten($color-links, 12%),
+      light    : lighten($color-links, 6%),
+      base     : $color-links,
+      dark     : darken($color-links, 6%),
+      x-dark   : darken($color-links, 12%),
+      xx-dark  : darken($color-links, 24%)
+    ),
+    text: (
+      xx-light : lighten($color-text, 27%),
+      x-light  : lighten($color-text, 18%),
+      light    : lighten($color-text, 9%),
+      base     : $color-text,
+      dark     : darken($color-text, 9%),
+      x-dark   : darken($color-text, 18%),
+      xx-dark  : darken($color-text, 27%)
+    )
+  );
+
+

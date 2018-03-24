@@ -1,0 +1,102 @@
+
+
+/*=================================
+  =Directory - gallery.css
+  =================================*/
+/*
+  1.  =Gallery Cards
+*/
+
+
+/*=================================
+  =Gallery Cards
+  =================================*/
+
+  /* Structure
+  ---------------------------------*/
+  .gallery-cards-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .gallery-card { 
+    cursor: pointer;
+    display: none;
+    padding: 0;
+
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+  }
+
+  .visible-gallery-card {
+    display: inline-block;
+  }
+
+  .gallery-card-block {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gallery-card-block.front-block-face {
+    z-index: 4;
+  }
+
+  .gallery-card-block.back-block-face {
+    z-index: 2;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .gallery-card-block-link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: 3;
+  }
+
+  .gallery-card-block-content {
+    width: 100%;
+  }
+
+
+  /* Mobile Landscape
+  ---------------------------------*/ 
+  @media all and (orientation:landscape) and (max-width: 750px){
+
+    .gallery-card {
+      width: 25%;
+    } 
+  }
+
+
+  /* Tablet
+  ---------------------------------*/ 
+  @media all and (min-width: 768px) {
+
+    .gallery-card {
+      width: 25%;
+    }
+  }
+
+
+  /* Color
+  ---------------------------------*/ 
+  .gallery-card-block {
+    color: #fff;
+    background: rgba(71,131,120,.9);
+  }
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+  
+
+/*=================================
+  =Directory - skills.css
+  =================================*/
+
+  /* Structure
+  ---------------------------------*/
+  #undercliff-img,
+  #hiking-img {
+    display: none;
+  }
+
+  .undercliff-img {
+    margin-top: -1px;
+  }
+
+  .hiking-img  {
+    margin-bottom: -1px;
+  }
+
+  @media all and (min-width: 800px) {
+    #undercliff-img,
+    #hiking-img {
+      display: block;
+    }
+
+    #mobile-undercliff-img,
+    #mobile-hiking-img {
+      display: none;
+    }
+  }
+
+  #skills .section-header {
+    margin: 50px auto 25px;
+  }
+  @media all and (min-width: 800px) {
+    #skills .section-header {
+      margin: 0 auto 25px;
+    }    
+  }
+
+
+  /* Color
+  ---------------------------------*/
+  #skills {
+    background-color: #496e82;
+  }
+
+
+
+
+
+
+

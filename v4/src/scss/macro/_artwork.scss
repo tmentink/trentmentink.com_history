@@ -1,0 +1,63 @@
+
+// ===========================================
+// Artwork
+// ===========================================
+
+
+// Structure
+// ===========================================
+  #artwork .text-container {
+    margin-bottom: rem(50px);
+
+    @include bp-min-width(1200px) {
+      margin-bottom: rem(75px);
+    }
+  } 
+
+  #artwork-wrapper {
+  	max-width: rem(2400px);
+  	margin: 0 auto;
+  }
+
+  #artwork-menu-button {
+    padding: 0 rem(12.5px);
+    margin: rem(12.5px) auto;
+
+    @include bp-min-width(1025px) {
+      display: none;
+    }
+  }
+
+  #artwork-menu {
+    .responsive-menu__item-wrapper {
+      max-width: rem(1050px);
+
+      @include bp-min-width-lg {
+        max-width: rem(1200px);
+      }
+    }
+  }
+
+
+// Font
+// =========================================== 
+  #artwork-menu-button {
+    font-family: $font-family-secondary;
+    font-size: rem(30px);
+  }
+
+
+// Color
+// =========================================== 
+  #artwork-menu {
+    background: $color-primary;
+
+    .hamburger-button {
+      background: $color-primary;
+    }
+
+    .hamburger-button__span {
+      background: $color-text;
+    }
+  }
+

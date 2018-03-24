@@ -1,0 +1,1139 @@
+
+
+/* =================================
+   =DIRECTORY
+   ================================= */
+/*
+  1.  =Animations
+  2.  =Loading Screen
+  3.  =Menu
+  4.  =Global Styles
+  5.  =Links
+  6.  =Custom Classes
+  7.  =Intro Section
+  8.  =About Section
+  9.  =Cave Section
+  10.  =Portfolio Section
+  11. =Contact Section
+  12. =Magnific Popup
+  13. =Media Queries
+*/
+
+
+
+/* =================================
+   =Animations
+   ================================= */
+/*
+  1. ~Spin
+  2. ~Flip
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+
+/* ~Spin
+   --------------------------------- */
+@-webkit-keyframes spin {
+  0%   { 
+      -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(0deg);  /* IE 9 */
+              transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+      -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: rotate(360deg);  /* IE 9 */
+              transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@keyframes spin {
+  0%   { 
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);  
+              transform: rotate(0deg);  
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+              transform: rotate(360deg);
+  }
+}
+
+
+/* ~Flip
+   --------------------------------- */
+@-webkit-keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+            transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+            transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+            transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+            transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+            transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+            transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+            transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+            transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+.animated.flip {
+  -webkit-backface-visibility: visible;
+          backface-visibility: visible; 
+  -webkit-animation-name: flip;
+          animation-name: flip;
+}
+
+
+/* ~Pulse
+   --------------------------------- */
+@-webkit-keyframes pulse {
+  0%   {
+      opacity: .618; 
+      -webkit-transform: scale(.618);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: scale(.618);  /* IE 9 */
+              transform: scale(.618);  /* Firefox 16+, IE 10+, Opera */
+  }
+  50%  {
+      opacity: 1; 
+        -webkit-transform: scale(1);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: scale(1);  /* IE 9 */
+                transform: scale(1);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+      opacity: .618; 
+      -webkit-transform: scale(.618);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: scale(.618);  /* IE 9 */
+              transform: scale(.618);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+@keyframes pulse {
+  0%   {
+      opacity: .618; 
+      -webkit-transform: scale(.618);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: scale(.618);  /* IE 9 */
+              transform: scale(.618);  /* Firefox 16+, IE 10+, Opera */
+  }
+  50%  {
+      opacity: 1; 
+        -webkit-transform: scale(1);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: scale(1);  /* IE 9 */
+                transform: scale(1);  /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+      opacity: .618; 
+      -webkit-transform: scale(.618);  /* Chrome, Opera 15+, Safari 3.1+ */
+          -ms-transform: scale(.618);  /* IE 9 */
+              transform: scale(.618);  /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+
+
+/* =================================
+   =Loading Screen
+   ================================= */
+/*
+  1.  ~Loader Structure
+  2.  ~Loaded Styles
+*/
+
+
+/* ~Loader Structure
+   --------------------------------- */
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  z-index: 2001;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 25%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  z-index: 2002;
+
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 200%;
+  background: #292b35;
+  z-index: 2000;
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+
+/* ~Loaded Styles
+   --------------------------------- */
+.loaded #loader-wrapper .loader-section.section-left {
+  -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+      -ms-transform: translateX(-100%);  /* IE 9 */
+          transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+          transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+.loaded #loader-wrapper .loader-section.section-right {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%); 
+
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+          transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.loaded #loader {
+  opacity: 0;
+
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+
+}
+.loaded #loader-wrapper {
+  visibility: hidden;
+
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+
+  -webkit-transition: all 0.3s 1s ease-out;
+          transition: all 0.3s 1s ease-out;
+}
+
+
+
+/* =================================
+   =Menu
+   ================================= */
+/*
+  1.  ~Menu Button
+  2.  ~Menu
+*/
+
+
+/* ~Menu Button
+   --------------------------------- */
+#menu-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background: #292b35; 
+  cursor: pointer;
+  z-index: 1050;
+
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+
+  -webkit-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+}
+
+#menu-btn span {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 6.18px;
+  background: #FFF0D2;
+  opacity: 1;
+
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+
+  -webkit-transition: .25s ease-in-out;
+          transition: .25s ease-in-out;
+}
+
+#menu-btn span:nth-child(even) {
+  left: 25px;
+  border-radius: 0 6.18px 6.18px 0;
+}
+
+#menu-btn span:nth-child(odd) {
+  left: 10px;
+  border-radius: 6.18px 0 0 6.18px;
+}
+
+#menu-btn span:nth-child(1), #menu-btn span:nth-child(2) {
+  top: 11px;
+}
+
+#menu-btn span:nth-child(3), #menu-btn span:nth-child(4) {
+  top: 23px;
+}
+
+#menu-btn span:nth-child(5), #menu-btn span:nth-child(6) {
+  top: 35px;
+}
+
+#menu-btn.open span:nth-child(1),#menu-btn.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#menu-btn.open span:nth-child(2),#menu-btn.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+#menu-btn.open span:nth-child(1) {
+  left: 10px;
+  top: 15px;
+}
+
+#menu-btn.open span:nth-child(2) {
+  left: 25px;
+  top: 15px;
+}
+
+#menu-btn.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+#menu-btn.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+#menu-btn.open span:nth-child(5) {
+  left: 10px;
+  top: 30px;
+}
+
+#menu-btn.open span:nth-child(6) {
+  left: 25px;
+  top: 30px;
+}
+
+
+/* ~Menu
+   --------------------------------- */
+#menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1043;
+
+  height: 100vh;
+  width: 100%;
+  background: #478378;
+  border: none;
+
+  text-align: center;
+  font-family: 'Roboto Slab', 'serif';
+  font-size: 2em;
+}
+
+#menu-items-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#menu-items {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.menu-link {
+  display: block;
+  height: 80px;
+}
+
+
+
+/* =================================
+   =Global Styles
+   ================================= */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #292b35;
+  color: #FFF0D2;
+
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.row {
+  margin: 0;
+}
+
+::-webkit-scrollbar { 
+  display: none; 
+}
+
+
+
+/* =================================
+   =Links
+   ================================= */
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover  {
+  color: #478378;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:hover {
+  color: #7DB6AD;
+}
+
+.primary-color,
+.primary-color:link,
+.primary-color:visited,
+.primary-color:active,
+.primary-color:hover {
+  color: #FFF0D2;
+  padding: 0 10px;
+}
+
+
+
+/* =================================
+   =Custom Classes
+   ================================= */
+
+.absolute {
+  position: absolute;
+  left: 0;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0,-50%);
+      -ms-transform: translate(0,-50%);
+          transform: translate(0,-50%);
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.fixed {
+  position: fixed;
+  top: 60px;
+  left: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.hr-full,
+.hr-med,
+.hr-sm {
+  display: block;
+  height: 1px;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #FFF0D2;
+  margin: 1.25em auto;
+  padding: 0; 
+}
+
+.hr-med {
+  width: 61.8%;
+}
+
+.hr-sm {
+  width: 33.3%; 
+}
+
+.text-container {
+  width: 80%;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.3em;
+}
+
+.section-header {
+  margin: 50px 0 25px;
+
+  font-family: 'Roboto Slab', 'serif';
+  font-size: 3.75em;
+  text-align: center;
+}
+
+.section-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background: #292b35;
+  z-index: 2000;
+}
+
+#t43 img {
+  margin: 33vh auto;
+  z-index: 2001;
+
+  -webkit-animation: spin 1.68s linear infinite;
+          animation: spin 1.68s linear infinite;
+}
+
+
+
+/* =================================
+   =Intro Section
+   ================================= */
+
+.intro {
+  position: relative;
+  margin-top: -1px;
+}
+
+.intro-img, .transition-img {
+  display: none;
+}
+
+.mobile-triangle-img,
+.triangle-img {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+
+/* =================================
+   =About Section
+   ================================= */
+
+
+
+/* =================================
+   =Cave Section
+   ================================= */
+
+#cave {
+  margin: 50px 0 25px;
+}
+
+.cave-img {
+  display: none;
+}
+
+
+
+/* =================================
+   =Portfolio Section
+   ================================= */
+/*
+  1.  ~Portfolio Menu
+  2.  ~Portfolio Items
+*/
+
+
+/* ~Portfolio Menu
+   --------------------------------- */
+
+#port-menu,
+#dropdown-port-filter {
+  font-size: 2em;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+#port-menu li {
+  display: inline-block;
+}
+
+#dropdown-port-filter {
+  display: none;
+  width: 101%;
+  background-color: #292b35;
+  z-index: 1000;
+}
+
+#dropdown-port-filter a {
+  display: block;
+  padding: 5px;
+}
+
+.port-filter {
+  padding: 10px;
+  margin-right: 20px;
+}
+
+.last-filter {
+  margin: 0;
+}
+
+.rotate{
+  -webkit-transition: all .33s linear;
+          transition: all .33s linear;
+}
+
+.rotate.down{
+  -webkit-transform:rotate(180deg);
+      -ms-transform:rotate(180deg);
+          transform:rotate(180deg);
+}
+
+
+/* ~Portfolio Items
+   --------------------------------- */
+#portfolio-items-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+.portfolio-item{
+  display: none;
+  cursor: pointer;
+}
+
+.visible-port-item {
+  display: inline-block;
+}
+
+.front {
+  z-index: 4;
+}
+
+.back {
+  z-index: 2;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.portfolio-box-caption {
+  display: block;
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+
+  color: #fff;
+  background: rgba(71,131,120,.9);
+}
+
+.portfolio-box-caption a {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 100%;
+  
+  z-index: 3;
+}
+
+.portfolio-box-caption-content {
+  width: 100%;
+}
+
+.project-title {
+  width: 90%;
+  margin: 0 auto;
+
+  font-size: 1.618em;
+}
+
+
+
+/* =================================
+   =Health Section
+   ================================= */
+
+.health-link,
+#health .hr-med {
+  margin: 25px auto;
+  text-align: center;
+}
+
+#health .text-container {
+  margin-bottom: 50px;
+}
+
+
+
+/* =================================
+   =Contact Section
+   ================================= */
+
+#contact {
+  position: relative;
+  height: 100vh;
+  font-size: 1.25em;
+}
+
+#contact h1 {
+  margin: 0;
+  font-size: 1.75em;
+}
+
+.contact-info {
+  width: 100%;
+}
+
+.contact-info li {
+  padding-bottom: 25px;
+}
+
+.contact-info span {
+  padding-right: 20px;
+}
+
+.logo {
+  max-height: 61.8px;
+}
+
+
+
+/* =================================
+   =Magnific Popup
+   ================================= */
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  /* ideally, transition speed should match zoom duration */
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+  opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+.mfp-fade {
+  z-index: 2002;
+}
+
+
+
+/* =================================
+   =Media Queries
+   ================================= */
+/*
+  1.  ~Mobile Landscape Orientation
+  2.  ~Tablet 
+  3.  ~Tablet Portrait Orientation
+  4.  ~Tablet Landscape Orientation
+  5.  ~Desktop 
+*/
+
+
+/* ~Mobile Landscape Orientation
+   --------------------------------- */
+@media all and (orientation:landscape) and (max-width: 750px){
+  
+  #portfolio,
+  #health {
+    margin-bottom: 100px;
+  }
+
+
+  /* =Menu
+  ------------------------*/
+  .menu-link {
+    height: 61.8px;
+  }
+
+
+  /* =Intro
+  ------------------------*/
+  .intro-img, 
+  .transition-img {
+    display: block;
+  }
+  .mobile-intro-img, 
+  .mobile-transition-img {
+    display: none;
+  }
+
+
+  /* =Cave
+  ------------------------*/
+  .cave-img {
+    display: block;
+  }
+  .mobile-cave-img {
+    display: none;
+  }
+
+
+  /* =Portfolio 
+  ------------------------*/
+  .portfolio-item {
+    width: 25%;
+  }
+
+  .project-title {
+    font-size: 1.43em;
+  }
+
+}
+
+
+
+/* ~Tablet 
+   --------------------------------- */
+@media all and (min-width: 760px) {
+
+  /* =Loading Screen 
+  ------------------------*/
+  #loader {
+    width: 200px;
+    height: 200px;
+    margin: -100px 0 0 -100px;
+  }
+
+
+  /* =About
+  ------------------------*/
+  .about {
+    font-size: 1.618em;
+  }
+
+
+  /* =Portfolio 
+  ------------------------*/
+  #portfolio {
+    font-size: 1.618em;
+  }
+
+  .project-title {
+    width: 85%;
+    font-size: 2em;
+  }
+
+
+  /* =Health
+  ------------------------*/
+  #health {
+    font-size: 1.618em;
+  }
+  .health-link {
+    font-size: 2em;
+  }
+  .health-link,
+  #health .hr-med {
+    margin: 50px auto;
+  }
+
+
+  /* =Contact 
+  ------------------------*/
+  #contact {
+    font-size: 2em;
+  }
+  .contact-info li {
+    padding-bottom: 33px;
+  }
+  .logo {
+    max-height: 106.18px;
+  }
+
+}
+
+
+/* ~Tablet Portrait Orientation 
+   --------------------------------- */
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+  
+  /* =Menu 
+  ------------------------*/
+  #menu {
+    height: 1024px;
+  }
+
+
+  /* =Contact 
+  ------------------------*/
+  #contact {
+    height: 1024px;
+  }
+
+}
+
+
+/* ~Tablet Landscape Orientation 
+   --------------------------------- */
+@media all and (orientation:landscape) and (min-width: 768px) and (max-width: 1024px){
+  
+  .text-container {
+    width: 61.8%;
+  }
+
+  
+  /* =Menu 
+  ------------------------*/
+  #menu {
+    height: 768px;
+  }
+
+
+  /* =Intro 
+  ------------------------*/
+  .intro-img, 
+  .transition-img {
+    display: block;
+  }
+  .mobile-intro-img, 
+  .mobile-transition-img {
+    display: none;
+  }
+
+
+  /* =Cave
+  ------------------------*/
+  .cave-img {
+    display: block;
+  }
+  .mobile-cave-img {
+    display: none;
+  }
+
+
+  /* =Portfolio 
+  ------------------------*/
+  .portfolio-item {
+    width: 25%;
+  }
+  .project-title {
+    width: 95%;
+    font-size: 1.618em;
+  }
+
+  
+  /* =Contact 
+  ------------------------*/
+  #contact {
+    height: 768px;
+  }
+
+}
+
+
+/* ~Desktop 
+   --------------------------------- */
+@media all and (min-width: 1025px) {  
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: block;
+  }
+
+  .text-container {
+    width: 50%;
+    margin: 5% auto;
+  }
+
+  body {
+    font-size: 1.5em;
+  }
+
+
+  /* =Intro 
+  ------------------------*/ 
+  .intro-img, 
+  .transition-img {
+    display: block;
+  }
+
+  .mobile-intro-img, 
+  .mobile-transition-img {
+    display: none;
+  }
+
+
+  /* =About
+  ------------------------*/
+  .about {
+    font-size: 1.1618em;
+  }
+
+
+  /* =Cave
+  ------------------------*/
+  .cave-img {
+    display: block;
+  }
+  .mobile-cave-img {
+    display: none;
+  }
+
+
+  /* =Portfolio 
+  ------------------------*/
+  #portfolio {
+    font-size: 1.1618em;
+  }
+  .portfolio-item {
+    width: 25%;
+  }
+  .project-title {
+    width: 80%;
+    font-size: 1.618em;
+  }
+
+
+  /* =Health
+  ------------------------*/
+  #health {
+    font-size: 1.1618em;
+  }
+
+  .health-link,
+  #health .hr-med {
+  margin: 25px auto;
+  }
+
+
+  /* =Contact 
+  ------------------------*/
+  #contact {
+    font-size: 1.618em;
+  }
+  .logo {
+    max-height: 81.6px;
+  }
+
+}
+
+
+
+
+
+
+
+

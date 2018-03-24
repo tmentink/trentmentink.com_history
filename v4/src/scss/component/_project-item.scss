@@ -1,0 +1,113 @@
+
+// ===========================================
+// Project Items
+// ===========================================
+
+
+// Structure
+// ===========================================
+  .project-item {
+    @include flex-display;
+    @include flex-flow("row wrap");
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: rem(75px);
+
+    max-width: rem(600px);
+    width: 90%;
+
+    @include bp-min-width(1000px) {
+      margin-bottom: rem(125px);
+      max-width: rem(1500px);
+    }
+  }
+
+  .project-item__img {
+    margin: auto;
+    width: 100%;
+
+    @include bp-min-width(1000px) {
+      width: 60%;
+    }
+  }
+
+  .project-item__text {
+    margin: auto;
+    max-width: rem(400px);
+    width: 100%;
+
+    @include bp-min-width(1000px) {
+      width: 35%;
+    }
+  }
+
+  .project-item__desc {
+    margin: rem(2.5px) auto;
+  }
+
+  // overwrite button component styles
+  .project-item .button {
+    margin: rem(25px) 0;
+    width: 40%;
+  }
+
+
+// Order
+// =========================================== 
+  
+  // default order
+  .project-item__text {
+    @include flex-order(1);
+  }
+  .project-item__img {
+    @include flex-order(2);
+  }
+
+  .project-item:nth-child(even) {
+    
+    @include bp-min-width(1000px) {
+      .project-item__text {
+        text-align: left;
+      }
+    }
+  }
+
+  .project-item:nth-child(odd) {
+    
+    @include bp-min-width(1000px) {
+      .project-item__text {
+        @include flex-order(2);
+      }
+      .project-item__img {
+        @include flex-order(1);
+      }
+    }
+
+    @include bp-min-width(1000px) {
+      .project-item__text {
+        text-align: right;
+      }
+    }
+  }
+
+
+// Font
+// ===========================================
+  .project-item__title {
+    font-family: $font-family-secondary;
+    font-size: rem(45px);
+    line-height: (50px / 45px);
+
+    @include bp-min-width-lg {
+      font-size: rem(55px);
+    }
+  }
+
+  .project-item__desc {
+    font-size: rem(18px);
+
+    @include bp-min-width-lg {
+      font-size: rem(22px);
+    }
+  }
+

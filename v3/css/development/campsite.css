@@ -1,0 +1,62 @@
+
+
+/*=================================
+  =Directory - campsite.css
+  =================================*/
+  
+  .campsite-img {
+    display: none;
+  }
+
+  /* Mobile Landscape
+  ---------------------------------*/
+  @media all and (orientation:landscape) and (max-width: 750px) {
+    
+    .campsite-img {
+      display: block;
+    }
+    .mobile-campsite-img {
+      display: none;
+    }
+  }
+
+
+  /* Tablet Landscape
+  ---------------------------------*/
+  @media all and (orientation:landscape) and (min-width: 768px) and (max-width: 1024px) {
+    
+    .campsite-img {
+      display: block;
+    }
+    .mobile-campsite-img {
+      display: none;
+    }
+  }
+
+
+  /* Desktop
+  ---------------------------------*/
+  @media all and (min-width: 800px) {
+    
+    /* set equal to height of main menu  */
+    /*
+    #campsite {
+      margin-top: 70px;
+    } */ 
+    
+    .outro {
+      position: relative;
+      margin-top: -1px;
+    }
+
+    .campsite-img {
+      display: block;
+    }
+    .mobile-campsite-img {
+      display: none;
+    }
+  }
+
+
+
+

@@ -1,0 +1,48 @@
+
+// ===========================================
+// Contact
+// ===========================================
+
+
+// Structure
+// ===========================================
+  #contact {
+    .text-container {
+      max-width: rem(450px);
+
+      @include bp-min-width-sm {
+        max-width: rem(550px);
+      }
+    }
+
+    .button--icon {
+      padding: rem(5px);
+      margin: rem(30px) rem(10px);
+    }
+
+    footer {
+      margin: rem(10px) auto rem(25px);
+    }
+  }  
+
+
+// Font
+// ===========================================  
+  #contact {
+    .button--icon {
+      font-size: rem(30px);
+
+      @include bp-min-width-sm {
+        font-size: rem(35px);
+      }
+      @include bp-min-width-lg {
+        font-size: rem(40px);
+      }
+    }
+
+    footer {
+      font-size: rem();
+    }
+  }
+  
+

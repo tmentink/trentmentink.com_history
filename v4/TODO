@@ -1,0 +1,35 @@
+
+Project Tasks:
+  ☐ Add Font Awesome fallback?
+  ☐ Think about using slimmer jQuery build
+    ☐ Add it to main.min.js?
+  ☐ Think about changing sass folder naming?
+    ☐ Add master page within each sass folder?
+
+
+Menu:
+  ☐ Make sticky menu more performant
+
+
+SASS:
+
+
+
+Loading Screen:
+  ☐ Refactor Sass
+
+
+Projects:
+
+
+
+Artwork:
+  ☐ Refactor mfp javascript
+  ☐ Allow multiple tags to gracefully wrap to another line
+
+
+
+
+
+
+

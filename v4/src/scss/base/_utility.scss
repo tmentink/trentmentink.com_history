@@ -1,0 +1,48 @@
+
+// ===========================================
+// Utilities
+// ===========================================
+
+
+// Font
+// ===========================================
+  // import if google fonts url is defined
+  @if variable-exists(font-url--google) {
+    @import url($font-url--google);
+  }
+
+
+// Unit Calculations
+// ===========================================
+  // calculate em values
+  @function em($target: $font-size--base, $context: $font-size--base) {
+    @return ($target / $context) * 1em;
+  }
+
+  // calculate rem values
+  @function rem($target: $font-size--base, $context: $font-size--base) {
+    @return ($target / $context) * 1rem;
+  }
+  
+
+// Color
+// ===========================================
+  // get color shades
+  @function color-shade($color, $shade: "base") {
+    @return map-get(map-get($color-shades, $color), $shade);
+  }
+  
+
+// Box Model
+// ===========================================
+  .no-padding {
+    padding: 0 !important;
+  }
+  .no-border {
+    border: none !important;
+  }
+  .no-margin {
+    margin: 0 !important;
+  }
+
+

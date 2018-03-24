@@ -1,0 +1,55 @@
+
+// ===========================================
+// Text Components
+// ===========================================
+
+
+// Structure
+// ===========================================
+	.section-header {
+		margin: rem(25px) auto;
+		max-width: 90%;
+	}
+
+	.text-container {
+		margin-left: auto;
+    margin-right: auto;
+    
+    max-width: rem(600px);
+    width: 85%;
+
+    @include bp-min-width-md {
+      max-width: rem(750px);
+    }
+	}	 
+
+
+// Font
+// ===========================================
+  .text-container {
+    font-size: rem(20px);
+
+    @include bp-min-width-sm {
+      font-size: rem(24px);
+    }
+
+    @include bp-min-width-lg {
+      font-size: rem(28px);
+    }
+  }
+
+  .section-header {
+    font-family: $font-family-secondary; 
+    font-size: rem(55px);
+    line-height: (60px / 55px);
+
+    @include bp-min-width-sm {
+      font-size: rem(60px);
+    }
+
+    @include bp-min-width-lg {
+      font-size: rem(65px);
+    }
+  }
+
+

@@ -1,0 +1,101 @@
+
+// ===========================================
+// Mixins
+// ===========================================
+
+  // absolute centering
+  @mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+  }
+
+  @mixin absolute-vcenter {
+    position: absolute;
+    top: 50%;
+    @include transform(translateY(-50%));
+  }
+
+
+// Vendor Prefixes
+// ===========================================
+  // disable user selection
+  @mixin no-select {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+
+  // transform prefixes
+  @mixin transform($value) {
+    -webkit-transform: #{$value};
+        -ms-transform: #{$value};
+            transform: #{$value};
+  }
+
+  // transition prefixes
+  @mixin transition($property: "all", $time: 0.2s, $easing: "ease-in", $delay: 0) {
+    -webkit-transition-property: #{$property};
+            transition-property: #{$property};
+    -webkit-transition-duration: #{$time};
+            transition-duration: #{$time};
+    -webkit-transition-timing-function: #{$easing};
+            transition-timing-function: #{$easing};      
+    -webkit-transition-delay: #{$delay};
+            transition-delay: #{$delay};
+  }
+
+  // backface-visiblity prefixes
+  @mixin backface-visibility($value) {
+    -webkit-backface-visibility: #{$value};
+            backface-visibility: #{$value};
+  }
+
+
+// Flex Box
+// ===========================================
+  // flex prefixes
+  @mixin flex-display {
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  // flex-flow prefixes
+  @mixin flex-flow($value) {
+    -ms-flex-flow: #{$value};
+        flex-flow: #{$value};
+  }
+
+  // flex-order prefixes
+  @mixin flex-order($value) {
+    -ms-flex-order: #{$value};
+             order: #{$value};
+  }
+
+  // flex-grow prefixes
+  @mixin flex-grow($value) {
+    -ms-flex-positive: #{$value};
+            flex-grow: #{$value};
+  }
+
+
+// Effects
+// ===========================================
+  @mixin shrink-on-active($class, $transition: false) {
+    .#{$class} {
+      @include backface-visibility(hidden);
+      @include transform(translateZ(0));
+
+      @if ($transition) {
+        @include transition("transform", 0.2s);
+      }
+    }
+
+    .#{$class}:active {
+      @include transform(scale(.9));
+    }
+  }
+
+
